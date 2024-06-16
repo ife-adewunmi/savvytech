@@ -26,7 +26,7 @@
 1. Clone the repo
 
 ```bash
-
+git clone https://github.com/ife-adewunmi/savvytech.git
 ```
 
 2. Personalize `siteMetadata.js` (site related information)
