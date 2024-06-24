@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "@/components/Image";
+import HeroCarousel from "@/components/common/hero/HeroCarousel";
 
 function Button() {
     return null;
@@ -25,11 +25,7 @@ const HeroBanner = () => {
 
             {/* Right Grid */}
             <div className="w-[823px] h-[590px]">
-                <img
-                    src="/images/ocean.jpeg"
-                    alt="Hero Banner"
-                    className="w-full h-full object-cover"
-                />
+                <HeroCarousel autoplay />
             </div>
         </div>
     );
