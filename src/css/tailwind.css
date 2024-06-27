@@ -2,6 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'gopher_black';
+  src:
+    url('../../public/static/font/gopher-black-webfont.woff2') format('woff2'),
+    url('../../public/static/font/gopher-black-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gopher_bold';
+  src:
+    url('../../public/static/font/gopher-bold-webfont.woff2') format('woff2'),
+    url('../../public/static/font/gopher-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gopher_medium';
+  src:
+    url('../../public/static/font/gopher-medium-webfont.woff2') format('woff2'),
+    url('../../public/static/font/gopher-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gopher_regular';
+  src:
+    url('../../public/static/font/gopher-regular-webfont.woff2') format('woff2'),
+    url('../../public/static/font/gopher-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ============= Typograph ============= */
+/* Display text */
+.display-text-xl {
+  @apply font-display_bold text-[5rem] leading-[5.5rem]  tracking-[-0.031rem];
+}
+.display-text-lg {
+  @apply font-display_bold text-[4rem] leading-[4.5rem]  tracking-[-0.031rem];
+}
+.display-text-md {
+  @apply font-display_bold text-5xl leading-[3.5rem]  tracking-[-0.031rem];
+}
+.display-text-sm {
+  @apply font-display_bold text-[2.5rem] leading-[3rem]  tracking-[-0.031rem];
+}
+/* Heading text */
+.heading-text-lg {
+  @apply font-display_bold text-[2rem] leading-[2.5rem]  tracking-[-0.031rem];
+}
+.heading-text-md-1 {
+  @apply font-display_bold text-2xl  tracking-tight;
+}
+.heading-text-md-2 {
+  @apply font-display_medium text-2xl  tracking-tight;
+}
+.heading-text-sm-1 {
+  @apply font-display_bold text-lg tracking-tight;
+}
+.heading-text-sm-2 {
+  @apply font-display_medium text-lg tracking-tight;
+}
+
+/* Body text */
+.body-text-2xl-1 {
+  @apply font-body text-2xl font-bold  tracking-normal;
+}
+.body-text-2xl-2 {
+  @apply font-body text-2xl  font-medium  tracking-normal;
+}
+.body-text-2xl-3 {
+  @apply font-body text-2xl font-normal  tracking-normal;
+}
+
+.body-text-xl-1 {
+  @apply font-body text-xl font-bold  tracking-normal;
+}
+.body-text-xl-2 {
+  @apply font-body text-xl font-medium  tracking-normal;
+}
+.body-text-xl-3 {
+  @apply font-body text-xl font-normal  tracking-normal;
+}
+
+.body-text-blog-1 {
+  @apply font-body text-lg font-bold leading-[2.375rem]  tracking-normal;
+}
+.body-text-blog-2 {
+  @apply font-body text-lg font-medium leading-[2.375rem]  tracking-normal;
+}
+.body-text-blog-3 {
+  @apply font-body text-lg font-normal leading-[2.375rem]  tracking-normal;
+}
+
+.body-text-lg-1 {
+  @apply font-body text-lg font-bold  tracking-normal;
+}
+.body-text-lg-2 {
+  @apply font-body text-lg font-medium  tracking-normal;
+}
+.body-text-lg-3 {
+  @apply font-body text-lg font-normal  tracking-normal;
+}
+
+.body-text-md-1 {
+  @apply font-body text-base font-bold  tracking-normal;
+}
+.body-text-md-2 {
+  @apply font-body text-base font-medium  tracking-normal;
+}
+.body-text-md-3 {
+  @apply font-body text-base font-normal  tracking-normal;
+}
+
+.body-text-sm-1 {
+  @apply font-body text-sm font-bold  tracking-normal;
+}
+.body-text-sm-2 {
+  @apply font-body text-sm font-medium  tracking-normal;
+}
+.body-text-sm-3 {
+  @apply font-body text-sm font-normal  tracking-normal;
+}
+
+/* CTA Button text */
+.cta-text-lg {
+  @apply font-display_bold text-lg uppercase  leading-[1.25rem]  tracking-[0.094rem];
+}
+.cta-text-md {
+  @apply font-display_bold text-sm uppercase leading-[1rem]  tracking-[0.094rem];
+}
+.cta-text-sm {
+  @apply font-display_bold text-xs uppercase   tracking-[0.063rem];
+}
+
+/* Label text */
+.label-text-lg-1 {
+  @apply font-display_bold text-sm uppercase leading-[1rem]  tracking-[0.063rem];
+}
+.label-text-lg-2 {
+  @apply font-display_bold text-sm leading-[1rem]  tracking-[0.063rem];
+}
+
+.label-text-md-1 {
+  @apply font-display_bold text-xs uppercase   tracking-[0.063rem];
+}
+.label-text-md-2 {
+  @apply font-display_bold text-xs tracking-[0.063rem];
+}
+
+.label-text-sm {
+  @apply font-display_bold text-[0.625rem] uppercase leading-[0.875rem]  tracking-[0.016rem];
+}
+
+/* Caption text */
+.caption-text-1 {
+  @apply font-display_bold text-[0.75rem] leading-[1.25rem]  tracking-[-0.031rem];
+}
+.caption-text-2 {
+  @apply font-display_medium text-[0.75rem] leading-[1.25rem]  tracking-[-0.031rem];
+}
+/* Breadcrumb text */
+.breadcrumb-text-1 {
+  @apply font-display_bold text-[0.625rem] leading-[0.875rem] tracking-[-0.031rem]   underline;
+}
+.breadcrumb-text-2 {
+  @apply font-display_bold text-[0.625rem] italic leading-[0.875rem]   tracking-[-0.031rem];
+}
+
 .task-list-item::before {
   @apply hidden;
 }
