@@ -65,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang={siteMetadata.language}
       className={`${open_sans.variable} scroll-smooth`}
       suppressHydrationWarning
+      style={{ overflowX: 'hidden' }}
     >
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png" />
@@ -79,13 +80,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProviders>
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <LayoutContainer>
-          
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
               <SectionContainer>
                 <Header />
               </SectionContainer>
               <main className="mb-auto">
-               
                 {children}
                 {/* <div className="z-1 absolute bottom-0 h-full w-full bg-hero-pattern bg-no-repeat" /> */}
               </main>

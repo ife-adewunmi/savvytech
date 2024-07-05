@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import { Transition } from '@headlessui/react'
 
 interface CarouselProps {
@@ -42,15 +42,15 @@ const Carousel = ({
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? children.length - 1 : prevIndex - 1))
   }
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex === children.length - 1 ? 0 : prevIndex + 1))
-  }
+  }, [children.length])
 
   useEffect(() => {
     if (!autoplay || children.length === 0) return
     const timer = setInterval(handleNext, interval)
     return () => clearInterval(timer)
-  }, [autoplay, interval, children.length])
+  }, [autoplay, interval, children.length, handleNext])
 
   const defaultPrevButton = (
     <button className={'m-4 h-8 w-8 rounded-full bg-slate-200'} onClick={handlePrev}>

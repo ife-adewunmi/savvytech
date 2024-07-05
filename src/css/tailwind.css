@@ -229,3 +229,11 @@ input:-webkit-autofill:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
+/* Trusted By */
+.trusted-by-title {
+  @apply text-center;
+}
+.trusted-by-client-logos {
+  @apply flex w-full items-center justify-between;
+}

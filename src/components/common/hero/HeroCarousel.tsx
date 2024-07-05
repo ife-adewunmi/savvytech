@@ -25,11 +25,11 @@ const HeroCarousel = ({ autoplay, interval }: HeroCarouselProps) => {
       controlSeparator
       className="h-full"
     >
-      <div key={1} className="bg-hero_image_1 ml-10 h-full rounded-3xl p-4">
+      <div key={1} className="ml-10 h-full rounded-3xl bg-hero_image_1 p-4">
         <h2 className="text-2xl font-bold">Item 1</h2>
         <p>This is the content 1.</p>
       </div>
-      <div key={2} className="bg-hero_image_2 ml-10 h-full rounded-3xl p-4">
+      <div key={2} className="ml-10 h-full rounded-3xl bg-hero_image_2 p-4">
         <h2 className="text-2xl font-bold">Item 2</h2>
         <p>This is the content 2.</p>
       </div>

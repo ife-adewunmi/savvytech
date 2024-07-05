@@ -11,6 +11,11 @@
     "lint": "next lint --fix --dir pages --dir app --dir src/components --dir lib --dir src/layouts --dir src/scripts",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn run lint && git add ."
+    }
+  },
   "dependencies": {
     "@headlessui/react": "1.7.19",
     "@next/bundle-analyzer": "14.2.3",
