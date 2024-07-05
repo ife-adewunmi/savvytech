@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroCarousel from '@/components/common/hero/HeroCarousel'
-import ButtonMain from '@/components/button/Button'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import ButtonComponent from '@/components/common/button/ButtonComponent'
 
 function Button() {
   return null
@@ -13,7 +13,7 @@ const HeroBanner = () => {
       {/* Left Grid */}
       <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center pr-32 ">
         <div className="flex w-full flex-col gap-14">
-          <div className='flex w-full flex-col gap-6'>
+          <div className="flex w-full flex-col gap-6">
             {/* Content Title */}
             <h1 className="display-text-lg">Engineering Excellence for Energy and Beyond</h1>
 
@@ -24,12 +24,12 @@ const HeroBanner = () => {
             </p>
           </div>
 
-          <ButtonMain
+          <ButtonComponent
             buttonStyle={{ size: 'lg', padding: 'lg', color: 'primary', align: 'left' }}
             rightIcon={<FaArrowRightLong size={24} />}
           >
             Book a qoute
-          </ButtonMain>
+          </ButtonComponent>
         </div>
       </div>
 
