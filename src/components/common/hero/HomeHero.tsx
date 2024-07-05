@@ -9,22 +9,24 @@ function Button() {
 
 const HeroBanner = () => {
   return (
-    <div className="mt-[80px] flex h-[590px] w-[100%] items-center justify-between">
+    <div className=" relative mt-[80px] flex h-[590px] w-full items-center justify-between pl-52 pr-6">
       {/* Left Grid */}
-      <div className="flex h-full w-[585px] flex-col gap-[52px]">
-        <div className="flex h-[348px] w-full flex-col gap-6">
-          {/* Content Title */}
-          <h1 className="display-text-xl">Engineering Excellence for Energy and Beyond</h1>
+      <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center pr-32 ">
+        <div className="flex w-full flex-col gap-14">
+          <div className='flex w-full flex-col gap-6'>
+            {/* Content Title */}
+            <h1 className="display-text-lg">Engineering Excellence for Energy and Beyond</h1>
 
-          {/* Content Description */}
-          <p className="body-text-2xl-3">
-            From engineering to procurement, Savvytech Limited offers unparalleled expertise and
-            reliable services to West Africa's vital industries.
-          </p>
+            {/* Content Description */}
+            <p className="body-text-2xl-3">
+              From engineering to procurement, Savvytech Limited offers unparalleled expertise and
+              reliable services to West Africa's vital industries.
+            </p>
+          </div>
 
           <ButtonMain
-            buttonStyle={{ size: 'sm', padding: 'sm', color: 'primary', align: 'left' }}
-           rightIcon={<FaArrowRightLong size={24} />}
+            buttonStyle={{ size: 'lg', padding: 'lg', color: 'primary', align: 'left' }}
+            rightIcon={<FaArrowRightLong size={24} />}
           >
             Book a qoute
           </ButtonMain>
@@ -32,7 +34,7 @@ const HeroBanner = () => {
       </div>
 
       {/* Right Grid */}
-      <div className="h-[590px] w-[823px]">
+      <div className="h-full w-full basis-[55%]">
         <HeroCarousel autoplay />
       </div>
     </div>
