@@ -1,9 +1,11 @@
 import Link from '@/components/Link'
 import projectsData from '@/data/projectsData'
 import clientsData from '@/data/clientsData'
+import servicesData from '@/data/servicesData'
 import siteMetadata from '@/data/siteMetadata'
 import HomeHero from '@/components/common/hero/HomeHero'
 import TrustedBy from '@/components/common/ClientsComponent'
+import WhatWeDo from '@/components/common/ServicesComponent'
 
 export default function Home({ posts }) {
   return (
@@ -13,7 +15,7 @@ export default function Home({ posts }) {
 
       <TrustedBy clientsData={clientsData} />
 
-      {/* What We Do Component */}
+      <WhatWeDo servicesData={servicesData} />
 
       {/* Our Project Component */}
 
