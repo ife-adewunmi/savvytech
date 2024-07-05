@@ -31,7 +31,8 @@ module.exports = {
       },
       colors: {
         // primary: colors.pink,
-        gray: colors.gray,
+        // gray: colors.gray,
+        white: '#FAFAFA',
         primary: {
           50: '#E0E0E8',
           100: '#CCCDDC',
@@ -86,6 +87,9 @@ module.exports = {
       backgroundImage: (theme) => ({
         main_gradient: `linear-gradient(to right, #2D307A 0%, #452D84 52%, #EC2426 100%)`,
         main_gradient_hover: `linear-gradient(to right, #2D307A 0%, #452D84 77%, #EC2426 100%)`,
+        'hero-pattern': "url('/static/images/svgs/worldmap_dot_pattern.svg')",
+        hero_image_1: "url('/static/images/hero_img_1.jpg')",
+        hero_image_2: "url('/static/images/hero_img_2.jpg')",
       }),
       typography: ({ theme }) => ({
         DEFAULT: {
