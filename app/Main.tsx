@@ -6,11 +6,12 @@ import siteMetadata from '@/data/siteMetadata'
 import HomeHero from '@/components/common/hero/HomeHero'
 import TrustedBy from '@/components/common/ClientsComponent'
 import WhatWeDo from '@/components/common/ServicesComponent'
+import HomeCTA from '@/components/common/call-to-action/HomeCTA'
 
 export default function Home({ posts }) {
   return (
     <>
-      <div className="absolute top-0 z-0 h-full w-full bg-hero-pattern bg-no-repeat opacity-50" />
+      <div className="absolute top-0 z-0 h-full w-full bg-hero-pattern bg-no-repeat opacity-50 dark:bg-hero-pattern_dark" />
       <HomeHero />
 
       <TrustedBy clientsData={clientsData} />
@@ -20,6 +21,7 @@ export default function Home({ posts }) {
       {/* Our Project Component */}
 
       {/* Home CTA Component */}
+      <HomeCTA />
 
       {/* Latest New Component */}
 
