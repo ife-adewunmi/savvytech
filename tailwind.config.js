@@ -88,6 +88,7 @@ module.exports = {
         main_gradient: `linear-gradient(to right, #2D307A 0%, #452D84 52%, #EC2426 100%)`,
         main_gradient_hover: `linear-gradient(to right, #2D307A 0%, #452D84 77%, #EC2426 100%)`,
         'hero-pattern': "url('/static/images/svgs/worldmap_dot_pattern.svg')",
+        'hero-pattern_dark': "url('/static/images/svgs/worldmap_dot_pattern_dark.svg')",
         hero_image_1: "url('/static/images/hero_img_1.jpg')",
         hero_image_2: "url('/static/images/hero_img_2.jpg')",
       }),

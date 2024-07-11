@@ -16,7 +16,7 @@ export const baseButton = tv({
       white:
         'text-neutral-700 bg-white drop-shadow-md hover:drop-shadow-lg hover:text-white hover:bg-neutral-900',
       outline:
-        'text-neutral-700 outline outline-1 outline-primary-900 hover:outline-white hover:text-white  hover:bg-neutral-900',
+        'text-neutral-700 dark:text-neutral-50 outline outline-1 dark:outline-neutral-50 outline-primary-900 dark:hover:text-primary-900 dark:hover:bg-neutral-50  hover:text-white  hover:bg-primary-900',
       text: 'bg-transparent text-neutral-700 px-0 text-icon',
     },
     padding: {

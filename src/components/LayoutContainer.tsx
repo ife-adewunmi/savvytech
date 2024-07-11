@@ -2,8 +2,9 @@ import { ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
+  className?: string
 }
 
-export default function LayoutContainer({ children }: Props) {
-  return <section className="mx-auto px-4 sm:px-6 xl:px-0">{children}</section>
+export default function LayoutContainer({ children, className }: Props) {
+  return <section className={`mx-auto px-4 sm:px-6 xl:px-0 ${className}`}>{children}</section>
 }

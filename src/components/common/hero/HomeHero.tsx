@@ -3,13 +3,9 @@ import HeroCarousel from '@/components/common/hero/HeroCarousel'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 
-function Button() {
-  return null
-}
-
 const HeroBanner = () => {
   return (
-    <div className=" relative mt-[80px] flex h-[590px] w-full items-center justify-between pl-52 pr-6">
+    <div className=" relative mt-[80px] mb-40 flex h-[590px] w-full items-center justify-between pl-52 pr-6">
       {/* Left Grid */}
       <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center pr-32 ">
         <div className="flex w-full flex-col gap-14">
