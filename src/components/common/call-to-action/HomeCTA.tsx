@@ -1,35 +1,37 @@
 import React from 'react'
-import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
+import SectionContainer from '@/components/SectionContainer'
 
 const HomeCTA = () => {
   return (
-    <div className=" relative mb-40 mt-[80px] flex h-[590px] w-full items-center justify-between pl-52 pr-6">
-      {/* Left Grid */}
-      <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center pr-32 ">
-        <div className="flex w-full flex-col gap-14">
-          <div className="flex w-full flex-col gap-6">
+    <SectionContainer>
+      <div className="relative mb-40 mt-[80px] rounded-3xl bg-red-800 text-white [clip-path:xywh(0_0_100%_100%_round_24px)] dark:bg-red-900 ">
+        <div className="relative z-10 flex h-full w-full items-center justify-between px-32 py-24 ">
+          {/* Left Grid */}
+          <div className="h-full w-full basis-1/2   ">
             {/* Content Title */}
-            <h1 className="display-text-lg">Engineering Excellence for Energy and Beyond</h1>
+            <h1 className="display-text-md">Premium Equipment with Unmatched Support</h1>
+          </div>
+
+          {/* Right Grid */}
+          <div className="flex h-full w-full basis-1/2 flex-col gap-8">
+            {/* Content Description */}
+            <p className="body-text-xl-2">
+              Connecting innovation with reliability for your most demanding projects. Trust
+              Savvytech to deliver excellence in every detail.
+            </p>
+            <ButtonComponent
+              buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
+            >
+              Book a qoute
+            </ButtonComponent>
           </div>
         </div>
-      </div>
 
-      {/* Right Grid */}
-      <div className="h-full w-full basis-[50%]">
-        {/* Content Description */}
-        <p className="body-text-2xl-3">
-          From engineering to procurement, Savvytech Limited offers unparalleled expertise and
-          reliable services to West Africa's vital industries.
-        </p>
-        <ButtonComponent
-          buttonStyle={{ size: 'lg', padding: 'lg', color: 'primary', align: 'left' }}
-          rightIcon={<FaArrowRightLong size={24} />}
-        >
-          Book a qoute
-        </ButtonComponent>
+        <div className="absolute -top-56 right-20 h-[300px] w-[300px] rounded-full  opacity-55 outline outline-[7rem] outline-red-500 " />
+        <div className="absolute -bottom-56 left-20 h-[300px] w-[300px] rounded-full  opacity-55 outline outline-[7rem] outline-red-500 " />
       </div>
-    </div>
+    </SectionContainer>
   )
 }
 
