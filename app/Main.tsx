@@ -7,6 +7,7 @@ import HomeHero from '@/components/common/hero/HomeHero'
 import TrustedBy from '@/components/common/ClientsComponent'
 import WhatWeDo from '@/components/common/ServicesComponent'
 import HomeCTA from '@/components/common/call-to-action/HomeCTA'
+import ProductCTA from '@/components/common/call-to-action/ProductCTA'
 
 export default function Home({ posts }) {
   return (
@@ -22,6 +23,7 @@ export default function Home({ posts }) {
 
       {/* Home CTA Component */}
       <HomeCTA />
+      <ProductCTA/>
 
       {/* Latest New Component */}
 
