@@ -8,6 +8,7 @@ import TrustedBy from '@/components/common/ClientsComponent'
 import WhatWeDo from '@/components/common/ServicesComponent'
 import HomeCTA from '@/components/common/call-to-action/HomeCTA'
 import ProductCTA from '@/components/common/call-to-action/ProductCTA'
+import OurProduct from "@/components/product/OurProduct";
 
 export default function Home({ posts }) {
   return (
@@ -19,9 +20,8 @@ export default function Home({ posts }) {
 
       <WhatWeDo servicesData={servicesData} />
 
-      {/* Our Project Component */}
+      <OurProduct  products={projectsData}/>
 
-      {/* Home CTA Component */}
       <HomeCTA />
       <ProductCTA/>
 
