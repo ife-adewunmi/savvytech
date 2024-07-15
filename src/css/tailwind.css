@@ -39,139 +39,141 @@
 }
 /* ============= Typograph ============= */
 /* Display text */
-.display-text-xl {
-  @apply font-display_bold text-[5rem] leading-[5.5rem]  tracking-[-0.031rem];
-}
-.display-text-lg {
-  @apply font-display_bold text-[4rem] leading-[4.5rem]  tracking-[-0.031rem];
-}
-.display-text-md {
-  @apply font-display_bold text-5xl leading-[3.5rem]  tracking-[-0.031rem];
-}
-.display-text-sm {
-  @apply font-display_bold text-[2.5rem] leading-[3rem]  tracking-[-0.031rem];
-}
-/* Heading text */
-.heading-text-lg {
-  @apply font-display_bold text-[2rem] leading-[2.5rem]  tracking-[-0.031rem];
-}
-.heading-text-md-1 {
-  @apply font-display_bold text-2xl  tracking-tight;
-}
-.heading-text-md-2 {
-  @apply font-display_medium text-2xl  tracking-tight;
-}
-.heading-text-sm-1 {
-  @apply font-display_bold text-lg tracking-tight;
-}
-.heading-text-sm-2 {
-  @apply font-display_medium text-lg tracking-tight;
-}
+@layer base {
+  .display-text-xl {
+    @apply font-display text-[5rem] font-black leading-[6.5rem] tracking-[-0.031rem];
+  }
+  .display-text-lg {
+    @apply font-display text-[4rem] font-black leading-[5.188rem] tracking-[-0.031rem];
+  }
+  .display-text-md {
+    @apply font-display text-5xl font-bold leading-[3.9rem] tracking-[-0.031rem];
+  }
+  .display-text-sm {
+    @apply font-display text-[2.5rem] font-bold leading-[3.25rem] tracking-[-0.031rem];
+  }
+  /* Heading text */
+  .heading-text-lg {
+    @apply font-display text-[2rem] font-bold leading-[2.625rem]  tracking-[-0.031rem];
+  }
+  .heading-text-md-1 {
+    @apply font-display text-2xl font-bold tracking-tight;
+  }
+  .heading-text-md-2 {
+    @apply font-display text-2xl font-bold tracking-tight;
+  }
+  .heading-text-sm-1 {
+    @apply font-display text-lg font-bold tracking-tight;
+  }
+  .heading-text-sm-2 {
+    @apply font-display text-lg font-bold tracking-tight;
+  }
 
-/* Body text */
-.body-text-2xl-1 {
-  @apply font-body text-2xl font-bold  tracking-normal;
-}
-.body-text-2xl-2 {
-  @apply font-body text-2xl  font-medium  tracking-normal;
-}
-.body-text-2xl-3 {
-  @apply font-body text-2xl font-normal  tracking-normal;
-}
+  /* Body text */
+  .body-text-2xl-1 {
+    @apply font-body text-2xl font-bold tracking-normal;
+  }
+  .body-text-2xl-2 {
+    @apply font-body text-2xl  font-medium tracking-normal;
+  }
+  .body-text-2xl-3 {
+    @apply font-body text-2xl font-normal  tracking-normal;
+  }
 
-.body-text-xl-1 {
-  @apply font-body text-xl font-bold  tracking-normal;
-}
-.body-text-xl-2 {
-  @apply font-body text-xl font-medium  tracking-normal;
-}
-.body-text-xl-3 {
-  @apply font-body text-xl font-normal  tracking-normal;
-}
+  .body-text-xl-1 {
+    @apply font-body text-xl font-bold  tracking-normal;
+  }
+  .body-text-xl-2 {
+    @apply font-body text-xl font-medium  tracking-normal;
+  }
+  .body-text-xl-3 {
+    @apply font-body text-xl font-normal  tracking-normal;
+  }
 
-.body-text-blog-1 {
-  @apply font-body text-lg font-bold leading-[2.375rem]  tracking-normal;
-}
-.body-text-blog-2 {
-  @apply font-body text-lg font-medium leading-[2.375rem]  tracking-normal;
-}
-.body-text-blog-3 {
-  @apply font-body text-lg font-normal leading-[2.375rem]  tracking-normal;
-}
+  .body-text-blog-1 {
+    @apply font-body text-lg font-bold leading-[2.375rem]  tracking-normal;
+  }
+  .body-text-blog-2 {
+    @apply font-body text-lg font-medium leading-[2.375rem]  tracking-normal;
+  }
+  .body-text-blog-3 {
+    @apply font-body text-lg font-normal leading-[2.375rem]  tracking-normal;
+  }
 
-.body-text-lg-1 {
-  @apply font-body text-lg font-bold  tracking-normal;
-}
-.body-text-lg-2 {
-  @apply font-body text-lg font-medium  tracking-normal;
-}
-.body-text-lg-3 {
-  @apply font-body text-lg font-normal  tracking-normal;
-}
+  .body-text-lg-1 {
+    @apply font-body text-lg font-bold  tracking-normal;
+  }
+  .body-text-lg-2 {
+    @apply font-body text-lg font-medium  tracking-normal;
+  }
+  .body-text-lg-3 {
+    @apply font-body text-lg font-normal  tracking-normal;
+  }
 
-.body-text-md-1 {
-  @apply font-body text-base font-bold  tracking-normal;
-}
-.body-text-md-2 {
-  @apply font-body text-base font-medium  tracking-normal;
-}
-.body-text-md-3 {
-  @apply font-body text-base font-normal  tracking-normal;
-}
+  .body-text-md-1 {
+    @apply font-body text-base font-bold  tracking-normal;
+  }
+  .body-text-md-2 {
+    @apply font-body text-base font-medium  tracking-normal;
+  }
+  .body-text-md-3 {
+    @apply font-body text-base font-normal  tracking-normal;
+  }
 
-.body-text-sm-1 {
-  @apply font-body text-sm font-bold  tracking-normal;
-}
-.body-text-sm-2 {
-  @apply font-body text-sm font-medium  tracking-normal;
-}
-.body-text-sm-3 {
-  @apply font-body text-sm font-normal  tracking-normal;
-}
+  .body-text-sm-1 {
+    @apply font-body text-sm font-bold  tracking-normal;
+  }
+  .body-text-sm-2 {
+    @apply font-body text-sm font-medium  tracking-normal;
+  }
+  .body-text-sm-3 {
+    @apply font-body text-sm font-normal  tracking-normal;
+  }
 
-/* CTA Button text */
-.cta-text-lg {
-  @apply font-body text-lg font-bold  uppercase  leading-[1.25rem]  tracking-[0.094rem];
-}
-.cta-text-md {
-  @apply font-body text-sm font-bold  uppercase leading-[1rem]  tracking-[0.094rem];
-}
-.cta-text-sm {
-  @apply font-body text-xs font-bold  uppercase   tracking-[0.063rem];
-}
+  /* CTA Button text */
+  .cta-text-lg {
+    @apply font-body text-lg font-bold  uppercase  leading-[1.25rem]  tracking-[0.094rem];
+  }
+  .cta-text-md {
+    @apply font-body text-sm font-bold  uppercase leading-[1rem]  tracking-[0.094rem];
+  }
+  .cta-text-sm {
+    @apply font-body text-xs font-bold  uppercase   tracking-[0.063rem];
+  }
 
-/* Label text */
-.label-text-lg-1 {
-  @apply font-body text-sm font-bold  uppercase leading-[1rem]  tracking-[0.063rem];
-}
-.label-text-lg-2 {
-  @apply font-body text-sm font-bold  leading-[1rem]  tracking-[0.063rem];
-}
+  /* Label text */
+  .label-text-lg-1 {
+    @apply font-body text-sm font-bold  uppercase leading-[1rem]  tracking-[0.063rem];
+  }
+  .label-text-lg-2 {
+    @apply font-body text-sm font-bold  leading-[1rem]  tracking-[0.063rem];
+  }
 
-.label-text-md-1 {
-  @apply font-body text-xs font-bold  uppercase   tracking-[0.063rem];
-}
-.label-text-md-2 {
-  @apply font-body text-xs font-bold  tracking-[0.063rem];
-}
+  .label-text-md-1 {
+    @apply font-body text-xs font-bold  uppercase   tracking-[0.063rem];
+  }
+  .label-text-md-2 {
+    @apply font-body text-xs font-bold  tracking-[0.063rem];
+  }
 
-.label-text-sm {
-  @apply font-body text-[0.625rem]  font-bold uppercase leading-[0.875rem]  tracking-[0.016rem];
-}
+  .label-text-sm {
+    @apply font-body text-[0.625rem]  font-bold uppercase leading-[0.875rem]  tracking-[0.016rem];
+  }
 
-/* Caption text */
-.caption-text-1 {
-  @apply font-body text-[0.75rem]  font-bold leading-[1.25rem]  tracking-[-0.031rem];
-}
-.caption-text-2 {
-  @apply font-body text-[0.75rem]  font-medium leading-[1.25rem]  tracking-[-0.031rem];
-}
-/* Breadcrumb text */
-.breadcrumb-text-1 {
-  @apply font-body text-[0.625rem] leading-[0.875rem] tracking-[-0.031rem]   underline;
-}
-.breadcrumb-text-2 {
-  @apply font-body text-[0.625rem] italic leading-[0.875rem]   tracking-[-0.031rem];
+  /* Caption text */
+  .caption-text-1 {
+    @apply font-body text-[0.75rem]  font-bold leading-[1.25rem]  tracking-[-0.031rem];
+  }
+  .caption-text-2 {
+    @apply font-body text-[0.75rem]  font-medium leading-[1.25rem]  tracking-[-0.031rem];
+  }
+  /* Breadcrumb text */
+  .breadcrumb-text-1 {
+    @apply font-body text-[0.625rem] leading-[0.875rem] tracking-[-0.031rem]   underline;
+  }
+  .breadcrumb-text-2 {
+    @apply font-body text-[0.625rem] italic leading-[0.875rem]   tracking-[-0.031rem];
+  }
 }
 
 .task-list-item::before {
@@ -199,7 +201,7 @@
 }
 
 .text-icon {
-  @apply [&_.icon-left]:hover:-translate-x-1.5 [&_.icon-right]:hover:translate-x-1.5;
+  @apply [&_.icon-left]:hover:-translate-x-1.5  [&_.icon-right]:hover:translate-x-1.5;
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */
@@ -232,8 +234,8 @@ input:-webkit-autofill:focus {
 
 /* Trusted By */
 .trusted-by-title {
-  @apply text-center heading-text-md-1 mb-8;
+  @apply heading-text-md-1 mb-8 text-center;
 }
 .trusted-by-client-logos {
-  @apply mx-auto flex max-w-screen-md space-x-9 items-center justify-center;
+  @apply mx-auto flex max-w-screen-md items-center justify-center space-x-9;
 }
