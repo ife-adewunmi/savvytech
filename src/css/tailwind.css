@@ -71,10 +71,10 @@
 
   /* Body text */
   .body-text-2xl-1 {
-    @apply font-body text-2xl font-bold tracking-normal;
+    @apply font-body text-2xl font-bold  tracking-normal;
   }
   .body-text-2xl-2 {
-    @apply font-body text-2xl  font-medium tracking-normal;
+    @apply font-body text-2xl  font-medium  tracking-normal;
   }
   .body-text-2xl-3 {
     @apply font-body text-2xl font-normal  tracking-normal;

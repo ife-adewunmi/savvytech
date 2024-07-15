@@ -11,10 +11,13 @@ const HeroBanner = () => {
         <div className="flex w-full flex-col gap-14">
           <div className="flex w-full flex-col gap-6">
             {/* Content Title */}
-            <h1 className="display-text-lg">Engineering Excellence for Energy and Beyond</h1>
+
+            <h1 className="xl:display-text-lg display-text-sm">
+              Engineering Excellence for Energy and Beyond
+            </h1>
 
             {/* Content Description */}
-            <p className="body-text-2xl-3">
+            <p className="body-text-2xl-2">
               From engineering to procurement, Savvytech Limited offers unparalleled expertise and
               reliable services to West Africa's vital industries.
             </p>
