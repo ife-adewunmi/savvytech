@@ -41,32 +41,32 @@
 /* Display text */
 @layer base {
   .display-text-xl {
-    @apply font-display_bold text-[5rem] leading-[5.5rem]  tracking-[-0.031rem];
+    @apply font-display text-[5rem] font-black leading-[6.5rem] tracking-[-0.031rem];
   }
   .display-text-lg {
-    @apply font-display_bold text-[4rem] leading-[4.5rem]  tracking-[-0.031rem];
+    @apply font-display text-[4rem] font-black leading-[5.188rem] tracking-[-0.031rem];
   }
   .display-text-md {
-    @apply font-display_bold text-5xl leading-[3.5rem]  tracking-[-0.031rem];
+    @apply font-display text-5xl font-bold leading-[3.9rem] tracking-[-0.031rem];
   }
   .display-text-sm {
-    @apply font-display_bold text-[2.5rem] leading-[3rem]  tracking-[-0.031rem];
+    @apply font-display text-[2.5rem] font-bold leading-[3.25rem] tracking-[-0.031rem];
   }
   /* Heading text */
   .heading-text-lg {
-    @apply font-display_bold text-[2rem] leading-[2.5rem]  tracking-[-0.031rem];
+    @apply font-display text-[2rem] font-bold leading-[2.625rem]  tracking-[-0.031rem];
   }
   .heading-text-md-1 {
-    @apply font-display_bold text-2xl  tracking-tight;
+    @apply font-display text-2xl font-bold tracking-tight;
   }
   .heading-text-md-2 {
-    @apply font-display_medium text-2xl  tracking-tight;
+    @apply font-display text-2xl font-bold tracking-tight;
   }
   .heading-text-sm-1 {
-    @apply font-display_bold text-lg tracking-tight;
+    @apply font-display text-lg font-bold tracking-tight;
   }
   .heading-text-sm-2 {
-    @apply font-display_medium text-lg tracking-tight;
+    @apply font-display text-lg font-bold tracking-tight;
   }
 
   /* Body text */
@@ -201,7 +201,7 @@
 }
 
 .text-icon {
-  @apply [&_.icon-left]:hover:-translate-x-1.5 [&_.icon-right]:hover:translate-x-1.5;
+  @apply [&_.icon-left]:hover:-translate-x-1.5  [&_.icon-right]:hover:translate-x-1.5;
 }
 
 /* https://stackoverflow.com/questions/61083813/how-to-avoid-internal-autofill-selected-style-to-be-applied */

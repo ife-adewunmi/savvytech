@@ -2,7 +2,7 @@ import '@/css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Open_Sans } from 'next/font/google'
+import { Open_Sans, Georama } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -17,6 +17,11 @@ const open_sans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-open-sans',
+})
+const georama = Georama({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-georama',
 })
 
 export const metadata: Metadata = {
@@ -63,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${open_sans.variable} scroll-smooth`}
+      className={`${open_sans.variable} ${georama.variable} scroll-smooth  `}
       suppressHydrationWarning
       style={{ overflowX: 'hidden' }}
     >

@@ -22,12 +22,8 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        display_bold: ['gopher_bold'],
-        display_medium: ['gopher_medium'],
-        display_regular: ['gopher_regular'],
+        display: ['var(--font-georama)'],
         body: ['var(--font-open-sans)'],
-
-        // sans: ['var(--font-space-grotesk)', ...fontFamily.sans],
       },
       colors: {
         // primary: colors.pink,
@@ -87,8 +83,11 @@ module.exports = {
       backgroundImage: (theme) => ({
         main_gradient: `linear-gradient(to right, #2D307A 0%, #452D84 52%, #EC2426 100%)`,
         main_gradient_hover: `linear-gradient(to right, #2D307A 0%, #452D84 77%, #EC2426 100%)`,
+        card_gradient_hover: `linear-gradient(115deg, #EAEAF2 0%, #FEF8F8 44%, #FAFAFA 100%)`,
         'hero-pattern': "url('/static/images/svgs/worldmap_dot_pattern.svg')",
         'hero-pattern_dark': "url('/static/images/svgs/worldmap_dot_pattern_dark.svg')",
+        'dot-pattern': "url('/static/images/svgs/bg_dot_pattern.svg')",
+        'dot-pattern_dark': "url('/static/images/svgs/bg_dot_pattern_dark.svg')",
         hero_image_1: "url('/static/images/hero_img_1.jpg')",
         hero_image_2: "url('/static/images/hero_img_2.jpg')",
       }),

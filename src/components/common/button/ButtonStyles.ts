@@ -2,7 +2,7 @@ import { tv } from 'tailwind-variants'
 
 // main button style
 export const baseButton = tv({
-  base: 'text-center text-white transition duration-500  ease-in-out rounded-lg px-6 relative whitespace-nowrap align-middle  inline-flex items-center justify-center select-none',
+  base: 'text-center  transition duration-500  ease-in-out rounded-lg px-6 relative whitespace-nowrap align-middle  inline-flex items-center justify-center select-none',
   variants: {
     size: {
       lg: 'cta-text-lg',
@@ -10,14 +10,14 @@ export const baseButton = tv({
       sm: 'cta-text-sm',
     },
     color: {
-      primary: 'bg-main_gradient hover:bg-main_gradient_hover',
-      secondary: 'bg-secondary-900 hover:bg-secondary-600',
+      primary: 'bg-main_gradient text-white hover:bg-main_gradient_hover',
+      secondary: 'bg-secondary-900 text-white hover:bg-secondary-600',
       neutral: 'bg-neutral-700 hover:bg-neutral-900 ',
       white:
         'text-neutral-700 bg-white drop-shadow-md hover:drop-shadow-lg hover:text-white hover:bg-neutral-900',
       outline:
-        'text-neutral-700 dark:text-neutral-50 outline outline-1 dark:outline-neutral-50 outline-primary-900 dark:hover:text-primary-900 dark:hover:bg-neutral-50  hover:text-white  hover:bg-primary-900',
-      text: 'bg-transparent text-neutral-700 px-0 text-icon',
+        'text-primary-900 dark:text-neutral-50 outline outline-1 dark:outline-neutral-50 outline-primary-900 dark:hover:text-primary-900 dark:hover:bg-neutral-50  hover:text-white  hover:bg-primary-900',
+      text_link: 'px-0 text-icon text-primary-700',
     },
     padding: {
       lg: 'py-[1.375rem]',

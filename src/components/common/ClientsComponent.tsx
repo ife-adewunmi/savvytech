@@ -21,7 +21,7 @@ const TrustedBy = ({ clientsData, width, height }: TrustedByProps) => {
             alt={`Client Logo ${index + 1}`}
             width={client.width || 225}
             height={client.height || 48}
-            className='h-12 w-full'
+            className="h-12 w-full"
           />
         ))}
       </div>
