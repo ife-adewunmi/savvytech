@@ -10,18 +10,15 @@ import SearchButton from './SearchButton'
 const Header = () => {
   return (
     <header className="relative z-10 flex items-center justify-between py-5">
-      <div>
-        <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
-            <div className="mr-3 block md:hidden">
-              <LogoMobile />
-            </div>
-            <div className="mr-3 hidden md:block  ">
-              <Logo />
-            </div>
-          </div>
-        </Link>
-      </div>
+      <Link href="/" aria-label={siteMetadata.headerTitle}>
+        <div className="mr-3 block md:hidden">
+          <LogoMobile />
+        </div>
+        <div className="mr-3 hidden md:block  ">
+          <Logo />
+        </div>
+      </Link>
+
       <div className="flex items-center space-x-4 xl:space-x-10">
         {headerNavLinks.map((link) => (
           <Link

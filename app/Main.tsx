@@ -14,12 +14,13 @@ export default function Home({ posts }) {
   return (
     <>
       <div className="absolute top-0 z-0 h-full w-full bg-hero-pattern bg-no-repeat opacity-50 dark:bg-hero-pattern_dark" />
+      
       <HomeHero />
 
       <TrustedBy clientsData={clientsData} />
 
       <WhatWeDo servicesData={servicesData} />
-      <div className="bg-dot-pattern dark:bg-dot-pattern_dark absolute z-0 h-[290%] w-full bg-no-repeat opacity-50" />
+      <div className="absolute z-0 h-[100%] w-full bg-red-600 bg-dot-pattern bg-no-repeat opacity-50 dark:bg-dot-pattern_dark" />
       <OurProduct products={projectsData} />
       <HomeCTA />
       <ProductCTA />
