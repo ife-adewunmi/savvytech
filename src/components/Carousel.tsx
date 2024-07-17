@@ -69,7 +69,7 @@ const Carousel = ({
   }
 
   return (
-    <div className={`relative h-[150px] w-full overflow-hidden text-center ${className}`}>
+    <div className={`relative w-full overflow-hidden text-center ${className}`}>
       <Transition
         show={true}
         appear
