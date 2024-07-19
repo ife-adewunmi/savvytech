@@ -63,7 +63,7 @@ module.exports = () => {
     reactStrictMode: true,
     pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
     eslint: {
-      dirs: ['app', 'src/components', 'src/layouts', 'src/scripts'],
+      dirs: ['app', 'src/components', 'src/data', 'src/layouts', 'src/scripts'],
     },
     images: {
       remotePatterns: [
