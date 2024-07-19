@@ -7,14 +7,24 @@ import { formatDate } from 'pliny/utils/formatDate'
 import siteMetadata from '@/data/siteMetadata'
 import { CoreContent } from 'pliny/utils/contentlayer'
 import Link from '@/components/Link'
+import { IsoDateTimeString } from '@contentlayer2/core'
 
 interface LatestNewsProps {
   postsData: CoreContent<Array<Blog>>
 }
 
+interface NewsItemProps {
+  title: string
+  slug: string
+  date: IsoDateTimeString
+  summary?: string
+  images?: string
+  structuredData: object
+}
+
 const MAX_DISPLAY = 3
 
-const NewsItem = ({ slug, structuredData, date, title, summary }) => (
+const NewsItem = ({ title, slug, structuredData, date, summary }: NewsItemProps) => (
   <div key={slug} className="overflow-hidden rounded-lg bg-white shadow-md">
     <Link
       href={`/blog/${slug}`}
