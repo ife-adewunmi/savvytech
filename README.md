@@ -1,16 +1,11 @@
 # SavvyTech Website
 
-[//]: # ([![GitHub Repo stars]&#40;https://img.shields.io/github/stars/timlrx/tailwind-nextjs-starter-blog?style=social&#41;]&#40;https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/&#41;)
-
-[//]: # ([![GitHub forks]&#40;https://img.shields.io/github/forks/timlrx/tailwind-nextjs-starter-blog?style=social&#41;]&#40;https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/network/&#41;)
-
-[//]: # ([![Twitter URL]&#40;https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Ftimlrxx&#41;]&#40;https://twitter.com/ife_adewunmi&#41;)
-
-[//]: # ([![Sponsor]&#40;https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/timlrx&#41;]&#40;https://github.com/sponsors/ife-adewunmi&#41;)
-
-[//]: # ()
-[//]: # ([![Deploy with Vercel]&#40;https://vercel.com/button&#41;]&#40;https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog&#41;)
-
+[//]: # '[![GitHub Repo stars](https://img.shields.io/github/stars/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/stargazers/)'
+[//]: # '[![GitHub forks](https://img.shields.io/github/forks/timlrx/tailwind-nextjs-starter-blog?style=social)](https://GitHub.com/timlrx/tailwind-nextjs-starter-blog/network/)'
+[//]: # '[![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Ftimlrxx)](https://twitter.com/ife_adewunmi)'
+[//]: # '[![Sponsor](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&link=https://github.com/sponsors/timlrx)](https://github.com/sponsors/ife-adewunmi)'
+[//]: #
+[//]: # '[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)'
 
 ## Sample posts
 

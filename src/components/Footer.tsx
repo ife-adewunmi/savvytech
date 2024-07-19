@@ -7,7 +7,7 @@ import ButtonComponent from '@/components/common/button/ButtonComponent'
 
 export default function Footer() {
   return (
-    <footer className="flex h-full items-start flex-col gap-10 bg-neutral-800 px-0 pb-20 pt-16 sm:px-6 md:px-11 lg:px-20  xl:px-56">
+    <footer className="flex h-full flex-col items-start gap-10 bg-neutral-800 px-0 pb-20 pt-16 sm:px-6 md:px-11 lg:px-20  xl:px-56">
       <div>
         <div className="block md:hidden">
           <LogoFooterMobile />
@@ -41,17 +41,17 @@ export default function Footer() {
         </div>
         <div className="body-text-md-1 flex basis-1/4 flex-col gap-8 self-stretch text-white">
           Company
-          <div className="flex  self-start flex-col gap-4">
-            <a href="#" className="body-text-md-3">
+          <div className="flex  flex-col gap-4 self-start">
+            <a href="/#" className="body-text-md-3">
               About us
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               Products
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               News
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               Testimonials
             </a>
           </div>

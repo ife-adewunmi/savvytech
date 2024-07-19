@@ -1,7 +1,7 @@
 export interface Client {
-  name: string,
-  width?: number,
-  height?: number,
+  name: string
+  width?: number
+  height?: number
 }
 
 const clientsData: Array<Client> = [

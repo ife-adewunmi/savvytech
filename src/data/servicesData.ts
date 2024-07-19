@@ -1,13 +1,13 @@
 export interface Service {
-  title: string,
-  description: string,
-  imgSrc?: string,
-  buttonText?: string,
+  title: string
+  description: string
+  imgSrc?: string
+  buttonText?: string
 }
 
 const servicesData: Array<Service> = [
   {
-    title: "ENGINEERING SERVICES",
+    title: 'ENGINEERING SERVICES',
     description: `Here at Savvytech Limited 'satisfactory service delivery' is our watch-word. 
     We are constantly driven by the need to satisfy all our clients by employing 
     innovative measures tailored to meet each and every client specification as this will vary from one client to the other.`,
