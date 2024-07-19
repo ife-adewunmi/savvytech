@@ -1,6 +1,6 @@
 import React from 'react'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/common/section/SectionContainer'
 
 const HomeCTA = () => {
   return (

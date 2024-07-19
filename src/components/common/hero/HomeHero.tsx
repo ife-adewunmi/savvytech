@@ -2,7 +2,7 @@ import React from 'react'
 import HeroCarousel from '@/components/common/hero/HeroCarousel'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/common/section/SectionContainer'
 
 const HeroBanner = () => {
   return (
