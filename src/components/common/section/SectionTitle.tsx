@@ -7,7 +7,6 @@ interface Props {
   className?: string
 }
 
-
 export default function SectionTitle({ text, tag, hasSubHeading, className }: Props) {
   return (
     <h2
