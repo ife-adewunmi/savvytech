@@ -11,6 +11,7 @@
     "analyze": "cross-env ANALYZE=true next build",
     "lint": "next lint --fix --dir pages --dir app --dir src/components --dir lib --dir src/layouts --dir src/scripts",
     "prepare": "husky install",
+    "prettier": "prettier --write .",
     "prettier:check": "prettier -c './src/**/*.{ts,tsx,js}'",
     "prettier:fix-src": "prettier -c './src/**/*.{ts,tsx,js}' --write"
   },
