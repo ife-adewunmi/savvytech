@@ -6,10 +6,10 @@
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node src/scripts/postbuild.mjs",
-    "ts:check": "tsc",
+    "ts-check": "tsc",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "prettier --write .",
+    "lint": "next lint --fix --dir pages --dir app --dir src/components --dir lib --dir src/layouts --dir src/scripts",
     "prepare": "husky install",
     "prettier:check": "prettier -c './src/**/*.{ts,tsx,js}'",
     "prettier:fix-src": "prettier -c './src/**/*.{ts,tsx,js}' --write"

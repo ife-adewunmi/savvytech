@@ -13,7 +13,7 @@ interface OurProductProps {
 const OurProduct = ({ products }: OurProductProps) => {
   return (
     <SectionContainer className="relative mb-40 xl:px-16">
-      <Link href={'#'}>
+      <Link href={'/#'}>
         <h2 className="display-text-sm mb-14 text-center text-neutral-800 dark:text-neutral-100">
           Our Product
         </h2>

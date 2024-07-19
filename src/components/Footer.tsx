@@ -42,16 +42,16 @@ export default function Footer() {
         <div className="body-text-md-1 flex basis-1/4 flex-col gap-8 self-stretch text-white">
           Company
           <div className="flex  flex-col gap-4 self-start">
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               About us
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               Products
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               News
             </a>
-            <a href="#" className="body-text-md-3">
+            <a href="/#" className="body-text-md-3">
               Testimonials
             </a>
           </div>
