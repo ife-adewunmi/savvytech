@@ -10,8 +10,8 @@ const HeroBanner = () => {
       <div className=" relative mb-40 mt-[80px] flex h-[590px] w-full flex-col items-center justify-between md:flex-row">
         {/* Left Grid */}
         <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7  2xl:pr-9  ">
-          <div className="flex w-full flex-col lg:gap-14 gap-8">
-            <div className="flex w-full flex-col lg:gap-6 gap-4">
+          <div className="flex w-full flex-col gap-8 lg:gap-14">
+            <div className="flex w-full flex-col gap-4 lg:gap-6">
               {/* Content Title */}
 
               <h1 className="2xl:display-text-lg xl:display-text-md heading-text-lg lg:display-text-sm text-neutral-900 dark:text-neutral-10">

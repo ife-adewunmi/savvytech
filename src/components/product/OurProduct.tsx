@@ -12,7 +12,7 @@ interface OurProductProps {
 
 const OurProduct = ({ products }: OurProductProps) => {
   return (
-    <SectionContainer className="xl:px-16 relative mb-40">
+    <SectionContainer className="relative mb-40 xl:px-16">
       <Link href={'#'}>
         <h2 className="display-text-sm mb-14 text-center text-neutral-800 dark:text-neutral-100">
           Our Product
@@ -22,7 +22,7 @@ const OurProduct = ({ products }: OurProductProps) => {
             <div
               key={index}
               className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12
-                          shadow-md transition duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:bg-card_gradient_hover"
+                          shadow-md transition duration-300 ease-in-out hover:scale-105 hover:bg-card_gradient_hover hover:shadow-xl"
             >
               <div>
                 <h3 className="heading-text-md-1 mb-4 text-neutral-800 dark:text-neutral-100">

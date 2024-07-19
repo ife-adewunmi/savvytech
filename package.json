@@ -1,19 +1,22 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
-  "version": "2.2.0",
+  "name": "savvytech",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
     "build": "cross-env INIT_CWD=$PWD next build && cross-env NODE_OPTIONS='--experimental-json-modules' node src/scripts/postbuild.mjs",
+    "ts:check": "tsc",
     "serve": "next start",
     "analyze": "cross-env ANALYZE=true next build",
-    "lint": "next lint --fix --dir pages --dir app --dir src/components --dir lib --dir src/layouts --dir src/scripts",
-    "prepare": "husky"
+    "lint": "prettier --write .",
+    "prepare": "husky install",
+    "prettier:check": "prettier -c './src/**/*.{ts,tsx,js}'",
+    "prettier:fix-src": "prettier -c './src/**/*.{ts,tsx,js}' --write"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn run lint && git add ."
+      "pre-commit": "npm run ts:check && npm run lint && git add ."
     }
   },
   "dependencies": {

@@ -22,10 +22,10 @@ const WhatWeDo = ({ servicesData, width, height }: WhatWeDoProps) => {
               key={index}
               className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-14`}
             >
-              <div className="md:w-1/2 overflow-hidden rounded-3xl">
+              <div className="overflow-hidden rounded-3xl md:w-1/2">
                 <Image
                   key={index}
-                  className="w-full rounded-3xl bg-cover bg-center shadow-lg hover:scale-110 transition duration-500 object-cover"
+                  className="w-full rounded-3xl bg-cover bg-center object-cover shadow-lg transition duration-500 hover:scale-110"
                   src={service?.imgSrc || ''}
                   alt={service.title}
                   width={width || 400}
