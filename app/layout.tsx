@@ -10,7 +10,7 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/common/section/SectionContainer'
 import LayoutContainer from '@/components/LayoutContainer'
 
 const open_sans = Open_Sans({

@@ -1,24 +1,23 @@
 import React from 'react'
 import { Project } from '@/data/projectsData'
 import Image from '@/components/Image'
-import SectionContainer from '../SectionContainer'
+import SectionContainer from '../common/section/SectionContainer'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '../common/button/ButtonComponent'
 import Link from '@/components/Link'
+import SectionTitle from '@/components/common/section/SectionTitle'
 
 interface OurProductProps {
-  products: Array<Project>
+  productsData: Array<Project>
 }
 
-const OurProduct = ({ products }: OurProductProps) => {
+const OurProduct = ({ productsData }: OurProductProps) => {
   return (
     <SectionContainer className="relative mb-40 xl:px-16">
       <Link href={'/#'}>
-        <h2 className="display-text-sm mb-14 text-center text-neutral-800 dark:text-neutral-100">
-          Our Product
-        </h2>
+        <SectionTitle text={'Our Product'}></SectionTitle>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-          {products.map((product, index) => (
+          {productsData.map((product, index) => (
             <div
               key={index}
               className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12

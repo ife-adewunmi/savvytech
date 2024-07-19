@@ -52,6 +52,5 @@ jobs:
 
       - name: Check Code Style
         run: yarn prettier
-
 #      - name: E2E Test
 #        run: yarn test-e2e

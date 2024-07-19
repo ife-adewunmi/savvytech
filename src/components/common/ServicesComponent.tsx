@@ -4,6 +4,7 @@ import { Service } from '@/data/servicesData'
 // import SectionContainer from '../SectionContainer'
 import LayoutContainer from '../LayoutContainer'
 import ButtonComponent from './button/ButtonComponent'
+import SectionTitle from '@/components/common/section/SectionTitle'
 
 interface WhatWeDoProps {
   servicesData: Array<Service>
@@ -15,7 +16,7 @@ const WhatWeDo = ({ servicesData, width, height }: WhatWeDoProps) => {
   return (
     <div className="my-40 bg-neutral-50 px-72 py-20 dark:bg-neutral-800">
       <div className="container mx-auto">
-        <h2 className="display-text-sm mb-14 text-center">What we do</h2>
+        <SectionTitle text={'What we do'}></SectionTitle>
         <div className="space-y-12">
           {servicesData.map((service, index) => (
             <div
