@@ -45,7 +45,7 @@ jobs:
         run: yarn build
 
       - name: Check types
-        run: yarn type-check
+        run: yarn ts:check
 
       - name: Check linting
         run: yarn lint
