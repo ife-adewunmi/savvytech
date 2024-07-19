@@ -24,7 +24,7 @@ interface NewsItemProps {
 
 const MAX_DISPLAY = 3
 
-const NewsItem = ({ title, slug, structuredData, date, summary }: NewsItemProps) => (
+const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
   <div key={slug} className="overflow-hidden rounded-lg bg-white shadow-md">
     <Link
       href={`/blog/${slug}`}
@@ -32,7 +32,7 @@ const NewsItem = ({ title, slug, structuredData, date, summary }: NewsItemProps)
       aria-label={`Read more: "${title}"`}
     >
       <Image
-        src={structuredData.image}
+        src={images ?? ''}
         alt={title}
         width={400}
         height={300}
