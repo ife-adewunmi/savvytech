@@ -25,7 +25,7 @@ interface NewsItemProps {
 const MAX_DISPLAY = 3
 
 const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
-  <div key={slug} className="overflow-hidden rounded-3xl bg-white shadow-md">
+  <div key={slug} className="overflow-hidden rounded-3xl bg-white dark:bg-slate-700 shadow-md">
     <Link
       href={`/blog/${slug}`}
       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -40,12 +40,12 @@ const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
       />
       <div className="px-6 pt-4 pb-8">
         <time
-          className="label-text-md-1 text-sm text-neutral-400 dark:text-neutral-300"
+          className="label-text-md-1 text-sm text-neutral-400 dark:text-neutral-100"
           dateTime={date}
         >{`new • ${formatDate(date, siteMetadata.locale)}`}</time>
         <div className="mt-2">
           <SectionTitle tag={'h2'} text={title}></SectionTitle>
-          <p className="body-text-md-3 line-clamp-3 text-neutral-500 dark:text-neutral-300">
+          <p className="body-text-md-3 line-clamp-3 text-neutral-500 dark:text-neutral-100">
             {summary}
           </p>
         </div>
