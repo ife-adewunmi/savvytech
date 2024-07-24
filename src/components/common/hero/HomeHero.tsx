@@ -6,10 +6,10 @@ import SectionContainer from '@/components/common/section/SectionContainer'
 
 const HeroBanner = () => {
   return (
-    <SectionContainer>
-      <div className=" relative mb-40 mt-[80px] flex h-[590px] w-full flex-col items-center justify-between md:flex-row">
+    <SectionContainer className="mt-16">
+      <div className=" relative flex h-[590px] w-full flex-col items-center justify-between md:flex-row">
         {/* Left Grid */}
-        <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7  2xl:pr-9  ">
+        <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7 2xl:pr-9  ">
           <div className="flex w-full flex-col gap-8 lg:gap-14">
             <div className="flex w-full flex-col gap-4 lg:gap-6">
               {/* Content Title */}

@@ -13,7 +13,7 @@ interface TrustedByProps {
 const TrustedBy = ({ clientsData, width, height }: TrustedByProps) => {
   return (
     <SectionContainer>
-      <SectionTitle text={'Trusted in the industry by'}></SectionTitle>
+      <SectionTitle text={'Trusted in the industry by'} tag="h3" className="text-center mb-14"></SectionTitle>
       <div className="trusted-by-client-logos">
         {clientsData.map((client, index) => (
           <Image
