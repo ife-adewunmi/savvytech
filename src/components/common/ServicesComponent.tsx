@@ -14,7 +14,7 @@ interface WhatWeDoProps {
 
 const WhatWeDo = ({ servicesData, width, height }: WhatWeDoProps) => {
   return (
-    <div className="my-40 bg-neutral-50 px-72 py-20 dark:bg-neutral-800">
+    <div className="my-40 bg-neutral-50 py-20 dark:bg-neutral-800 2xl:px-72">
       <div className="container mx-auto">
         <SectionTitle text={'What we do'}></SectionTitle>
         <div className="space-y-12">
@@ -36,12 +36,24 @@ const WhatWeDo = ({ servicesData, width, height }: WhatWeDoProps) => {
               </div>
               <div className="space-y-4 md:w-1/2">
                 {/* <h3 className="text-xl font-semibold">{service.title}</h3> */}
-                <p className="body-text-2xl-3  ">{service.description}</p>
-                <ButtonComponent
-                  buttonStyle={{ size: 'md', padding: 'md', color: 'outline', align: 'left' }}
-                >
-                  {service.buttonText}
-                </ButtonComponent>
+                <p className=" 2xl:body-text-2xl-3 body-text-md-3 xl:body-text-xl-3">
+                  {service.description}
+                </p>
+
+                <div className="hidden md:block">
+                  <ButtonComponent
+                    buttonStyle={{ size: 'md', padding: 'md', color: 'outline', align: 'left' }}
+                  >
+                    {service.buttonText}
+                  </ButtonComponent>
+                </div>
+                <div className="block md:hidden">
+                  <ButtonComponent
+                    buttonStyle={{ size: 'sm', padding: 'sm', color: 'outline', align: 'left' }}
+                  >
+                    {service.buttonText}
+                  </ButtonComponent>
+                </div>
               </div>
             </div>
           ))}

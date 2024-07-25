@@ -22,11 +22,10 @@ export default function Home({ posts }) {
 
       <WhatWeDo servicesData={servicesData} />
 
-      <div className="absolute z-0 h-[100%] w-full bg-red-600 bg-dot-pattern bg-no-repeat opacity-50 dark:bg-dot-pattern_dark" />
-
-      <OurProduct productsData={projectsData} />
-
-      <HomeCTA />
+      <div className=" z-0 h-full w-full bg-dot-pattern bg-no-repeat dark:bg-dot-pattern_dark">
+        <OurProduct productsData={projectsData} />
+        <HomeCTA />
+      </div>
 
       {/*<ProductCTA />*/}
 

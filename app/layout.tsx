@@ -86,7 +86,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <LayoutContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <SectionContainer>
+              <SectionContainer className="mb-0">
                 <Header />
               </SectionContainer>
               <main className="mb-auto">

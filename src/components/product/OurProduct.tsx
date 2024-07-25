@@ -20,14 +20,14 @@ const OurProduct = ({ productsData }: OurProductProps) => {
           {productsData.map((product, index) => (
             <div
               key={index}
-              className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12
-                          shadow-md transition duration-300 ease-in-out hover:scale-105 hover:bg-card_gradient_hover hover:shadow-xl"
+              className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12 shadow-md
+                          transition duration-300 ease-in-out hover:scale-105 hover:bg-card_gradient_hover hover:shadow-xl dark:bg-slate-700  dark:hover:bg-card_gradient_hover_dark"
             >
               <div>
-                <h3 className="heading-text-md-1 mb-4 text-neutral-800 dark:text-neutral-100">
+                <h3 className="heading-text-md-1 mb-4 text-neutral-800 dark:text-neutral-50">
                   {product.title}
                 </h3>
-                <p className="body-text-lg-3 text-neutral-500 dark:text-neutral-300">
+                <p className="body-text-lg-3 text-neutral-500 dark:text-neutral-100">
                   {product.description}
                 </p>
                 <div className="mt-2">
