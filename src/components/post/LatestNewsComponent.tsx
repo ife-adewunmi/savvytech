@@ -25,7 +25,7 @@ interface NewsItemProps {
 const MAX_DISPLAY = 3
 
 const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
-  <div key={slug} className="overflow-hidden rounded-3xl bg-white dark:bg-slate-700 shadow-md">
+  <div key={slug} className="overflow-hidden rounded-3xl bg-white shadow-md dark:bg-slate-700">
     <Link
       href={`/blog/${slug}`}
       className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -38,7 +38,7 @@ const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
         height={300}
         className="h-48 w-full object-cover"
       />
-      <div className="px-6 pt-4 pb-8">
+      <div className="px-6 pb-8 pt-4">
         <time
           className="label-text-md-1 text-sm text-neutral-400 dark:text-neutral-100"
           dateTime={date}

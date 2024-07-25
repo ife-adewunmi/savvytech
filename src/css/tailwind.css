@@ -237,5 +237,5 @@ input:-webkit-autofill:focus {
   @apply heading-text-md-1 mb-8 text-center;
 }
 .trusted-by-client-logos {
-  @apply mx-auto flex max-w-screen-md items-center justify-center space-x-9;
+  @apply mx-auto flex  items-center justify-center space-x-9 md:max-w-screen-md;
 }

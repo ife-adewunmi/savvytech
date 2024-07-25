@@ -53,7 +53,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Right Grid */}
-        <div className="flex w-full basis-[55%] flex-col justify-center md:h-[260px] lg:h-[390px] 2xl:h-[510px]">
+        <div className="mt-8 flex w-full basis-[55%] flex-col justify-center md:mt-0 md:h-[260px] lg:h-[390px] 2xl:h-[510px]">
           <div className="h-full w-full self-auto">
             <HeroCarousel autoplay />
           </div>
