@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
@@ -18,7 +18,7 @@ interface HeaderProps {
 const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
   const [isProductsOpen, setIsProductsOpen] = useState(false)
   const dropdownRef = useRef(null)
-  const timeoutRef = useRef(null)
+  const timeoutRef = useRef<number | undefined>(undefined)
 
   const handleDropdownToggle = () => {
     if (dropdownTrigger === 'click') {
@@ -43,7 +43,7 @@ const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
     }
   }
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
       handleDropdownToggle()
     }

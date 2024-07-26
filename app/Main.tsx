@@ -27,8 +27,6 @@ export default function Home({ posts }) {
         <HomeCTA />
       </div>
 
-      {/*<ProductCTA />*/}
-
       <LatestNewsComponent postsData={posts} />
     </>
   )
