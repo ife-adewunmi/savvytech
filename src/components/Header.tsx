@@ -27,7 +27,9 @@ const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
 
   const handleMouseEnter = () => {
     if (dropdownTrigger === 'hover') {
-      clearTimeout(timeoutRef.current)
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
       setIsProductsOpen(true)
     }
   }
@@ -56,6 +58,9 @@ const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
     document.addEventListener('mousedown', handleClickOutside)
     return () => {
       document.removeEventListener('mousedown', handleClickOutside)
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current)
+      }
     }
   }, [])
 
