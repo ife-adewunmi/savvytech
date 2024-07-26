@@ -86,16 +86,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <LayoutContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <SectionContainer className="mb-0">
-                <Header dropdownTrigger={'click'} />
-              </SectionContainer>
-              <main className="mb-auto">
-                {children}
-                {/* <div className="z-1 absolute bottom-0 h-full w-full bg-hero-pattern bg-no-repeat" /> */}
-              </main>
+              <Header dropdownTrigger={'click'} />
+              <main className="mb-auto">{children}</main>
             </SearchProvider>
             <Footer />
-            {/* </div> */}
           </LayoutContainer>
         </ThemeProviders>
       </body>

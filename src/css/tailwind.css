@@ -239,3 +239,8 @@ input:-webkit-autofill:focus {
 .trusted-by-client-logos {
   @apply mx-auto flex  items-center justify-center space-x-9 md:max-w-screen-md;
 }
+
+/* Header wrapper */
+.header-wrapper {
+  @apply mx-auto max-w-3xl md:max-w-screen-md md:px-11 lg:max-w-screen-lg lg:px-20 xl:max-w-screen-xl xl:px-[7.75rem] 2xl:max-w-[1360px] 2xl:px-0;
+}

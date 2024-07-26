@@ -9,6 +9,7 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import { MdChevronRight } from 'react-icons/md'
 
 interface HeaderProps {
   dropdownTrigger?: string
@@ -65,7 +66,7 @@ const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
   }, [])
 
   return (
-    <header className="relative z-10 flex items-center justify-between py-5">
+    <header className="header-wrapper relative z-10 flex items-center justify-between py-5">
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="mr-3 block md:hidden">
           <LogoMobile />
@@ -91,14 +92,14 @@ const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
               >
                 {link.title}
                 {isProductsOpen && (
-                  <div className="absolute left-0 mt-2 grid w-80 grid-cols-2 gap-4 rounded-md bg-white p-4 py-1 shadow-lg ring-1 ring-black ring-opacity-5">
+                  <div className="absolute left-0 mt-8 inline-grid w-[400px] grid-cols-2 gap-x-10 gap-y-2 rounded-md bg-white p-4 px-10 py-6 shadow-lg  ring-1 ring-black ring-opacity-5 dark:bg-neutral-700">
                     {link.dropdown.map((item) => (
                       <Link
                         key={item.title}
                         href={item.href}
-                        className="block px-4 py-2 text-sm text-slate-600 hover:text-slate-900"
+                        className=" flex w-full items-center py-3  text-sm text-slate-600 transition hover:translate-x-6 hover:text-slate-900 dark:text-neutral-10"
                       >
-                        {`${item.title} >`}
+                        {`${item.title}`} <MdChevronRight size={16} />
                       </Link>
                     ))}
                   </div>
