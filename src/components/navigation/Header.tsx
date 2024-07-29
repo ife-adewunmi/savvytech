@@ -11,11 +11,7 @@ import ThemeSwitch from '@/components/common/button/ThemeSwitch'
 import SearchButton from '@/components/common/button/SearchButton'
 import DropdownMenu from './DropdownMenu'
 
-interface HeaderProps {
-  dropdownTrigger?: string
-}
-
-const Header = ({ dropdownTrigger = 'hover' }: HeaderProps) => {
+const Header = () => {
   return (
     <header className="header-wrapper relative z-10 flex items-center justify-between py-5">
       <Link href="/" aria-label={siteMetadata.headerTitle}>
