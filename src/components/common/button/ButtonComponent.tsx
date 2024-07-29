@@ -14,6 +14,7 @@ interface ButtonProps extends BaseButtonAttributes {
   rightIcon?: React.ReactElement
   buttonStyle?: VariantProps<typeof baseButton>
   className?: string
+  fullWidth?: boolean
 }
 
 const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -27,6 +28,7 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       leftIcon,
       rightIcon,
       className,
+      fullWidth = false,
       ...rest
     },
     ref
@@ -49,9 +51,11 @@ const ButtonComponent = forwardRef<HTMLButtonElement, ButtonProps>(
       return baseButton({ ...buttonStyle, className })
     }
 
+    const widthClass = fullWidth ? 'w-full' : ''
+
     return (
       <button
-        className={renderButtonVariant()}
+        className={`${renderButtonVariant()} ${widthClass}`}
         {...rest}
         type={type ? 'submit' : 'button'}
         ref={ref}

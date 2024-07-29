@@ -5,7 +5,7 @@ const headerNavLinks = [
   { href: Page.ABOUT_US, title: 'ABOUT US' },
   {
     href: Page.PROJECT,
-    title: `PRODUCTS ▾ `,
+    title: `PRODUCTS`,
     dropdown: [
       { href: Page.PROJECT.concat('/manitowoc'), title: 'MANITOWOC' },
       { href: Page.PROJECT.concat('/donaldson'), title: 'DONALDSON' },
