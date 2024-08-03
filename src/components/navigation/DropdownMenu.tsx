@@ -59,19 +59,23 @@ const DropdownMenu = ({
   if (isMobile) {
     return (
       <>
-        <ButtonComponent fullWidth onClick={handleDropdownToggle} className={`p-0 ${className}`}>
+        <ButtonComponent
+          fullWidth
+          onClick={handleDropdownToggle}
+          className={`justify-start p-0 ${className}`}
+        >
           {title}
           <MdExpandMore className="ml-1 inline h-4 w-4" />
         </ButtonComponent>
         {isDropdownOpen && (
-          <div className="pl-4">
+          <div className="py-2 pl-6 ">
             {items.map((item) => (
               <Link
                 key={item.title}
                 href={item.href}
-                className="flex w-full items-center py-2 text-sm font-medium text-gray-700 transition hover:translate-x-6 hover:text-slate-900 dark:text-neutral-10"
+                className="body-text-md-1 flex w-full items-center gap-1 py-3 text-neutral-700 transition hover:translate-x-6 hover:text-neutral-900 dark:text-neutral-10"
               >
-                {item.title} <MdChevronRight size={16} />
+                {item.title} <MdChevronRight size={20} />
               </Link>
             ))}
           </div>
@@ -99,7 +103,7 @@ const DropdownMenu = ({
             <Link
               key={item.title}
               href={item.href}
-              className="flex w-full items-center py-3 text-sm text-slate-600 transition hover:translate-x-6 hover:text-slate-900 dark:text-neutral-10"
+              className="flex w-full items-center py-3 text-neutral-600 transition hover:translate-x-6 hover:text-slate-900 dark:text-neutral-10"
             >
               {item.title} <MdChevronRight size={16} />
             </Link>

@@ -7,7 +7,7 @@ import ButtonComponent from '@/components/common/button/ButtonComponent'
 
 export default function Footer() {
   return (
-    <footer className="flex h-full flex-col items-start gap-10 bg-neutral-800 px-0 pb-20 pt-16 sm:px-6 md:px-11 lg:px-20  xl:px-56">
+    <footer className="flex h-full flex-col items-start gap-10 bg-neutral-800 px-5 py-16 sm:px-6 md:px-11 md:pb-20 lg:px-20  xl:px-56">
       <div>
         <div className="block md:hidden">
           <LogoFooterMobile />
@@ -16,9 +16,9 @@ export default function Footer() {
           <LogoFooter />
         </div>
       </div>
-      <div className="flex w-full flex-row items-stretch justify-between gap-8 ">
+      <div className="flex w-full flex-col items-stretch justify-between gap-24 md:flex-row md:gap-8 ">
         <div className="basis-1/3 text-white">
-          <div className="flex w-full flex-col items-start gap-8">
+          <div className="flex w-full flex-col items-start gap-8 pr-10 md:pr-0">
             <div className="flex flex-col gap-2">
               <h3 className="body-text-sm-1 ">LAGOS Head Office</h3>
               <p className="body-text-md-3">
@@ -39,7 +39,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="body-text-md-1 flex basis-1/4 flex-col gap-8 self-stretch text-white">
+        <div className="body-text-md-1 flex basis-1/4 flex-col gap-4 self-stretch text-white md:gap-8">
           Company
           <div className="flex  flex-col gap-4 self-start">
             <a href="/#" className="body-text-md-3">
@@ -56,18 +56,34 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div className="body-text-md-1 flex basis-1/4 flex-col gap-8  text-white">
+        <div className="body-text-md-1 flex basis-1/4 flex-col gap-4 text-white  md:gap-8">
           Connect
           <div className="flex flex-col gap-4">
             <p className="body-text-md-3">+234-1-270-4409</p>
             <p className="body-text-md-3">info@savvytechweb.com</p>
-            <ButtonComponent
-              buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
-            >
-              Contact Us
-            </ButtonComponent>
+            <div className="hidden lg:block">
+              <ButtonComponent
+                buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
+            <div className="hidden md:block lg:hidden">
+              <ButtonComponent
+                buttonStyle={{ size: 'md', padding: 'md', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
+            <div className="block md:hidden">
+              <ButtonComponent
+                buttonStyle={{ size: 'sm', padding: 'sm', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
           </div>
-          <div className="mb-3 flex space-x-4">
+          <div className="my-3 flex space-x-4">
             <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
             <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
             <SocialIcon kind="x" href={siteMetadata.x} size={6} />

@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </Link>
 
-      <div className="flex items-center space-x-4 xl:space-x-10">
+      <div className="flex items-center xl:space-x-10">
         {headerNavLinks.map((link) => (
           <div key={link.title} className="relative">
             {link?.dropdown ? (
@@ -45,8 +45,10 @@ const Header = () => {
             )}
           </div>
         ))}
-        <SearchButton />
-        <ThemeSwitch />
+        <div className="flex items-center space-x-4 xl:space-x-10">
+          <SearchButton />
+          <ThemeSwitch />
+        </div>
         <MobileNav />
       </div>
     </header>

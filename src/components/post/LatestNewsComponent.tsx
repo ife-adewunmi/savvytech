@@ -40,12 +40,12 @@ const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => (
       />
       <div className="px-6 pb-8 pt-4">
         <time
-          className="label-text-md-1 text-sm text-neutral-400 dark:text-neutral-100"
+          className="label-text-sm md:label-text-md-1 text-neutral-400 dark:text-neutral-100"
           dateTime={date}
         >{`new • ${formatDate(date, siteMetadata.locale)}`}</time>
         <div className="mt-2">
           <SectionTitle tag={'h2'} text={title}></SectionTitle>
-          <p className="body-text-md-3 line-clamp-3 text-neutral-500 dark:text-neutral-100">
+          <p className="md:body-text-md-3 body-text-sm-3  line-clamp-3 text-neutral-500 dark:text-neutral-100">
             {summary}
           </p>
         </div>

@@ -21,7 +21,7 @@ const MobileNav = () => {
 
   return (
     <>
-      <button aria-label="Toggle Menu" onClick={onToggleNav} className="lg:hidden">
+      <button aria-label="Toggle Menu" onClick={onToggleNav} className="ml-5 lg:hidden">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
@@ -36,7 +36,7 @@ const MobileNav = () => {
         </svg>
       </button>
       <div
-        className={`fixed left-0 top-0 z-10 h-full w-full transform bg-white opacity-95 duration-300 ease-in-out dark:bg-gray-950 dark:opacity-[0.98] ${
+        className={`fixed left-0 top-0 z-50 h-full w-full transform bg-neutral-10 bg-opacity-10 backdrop-blur-3xl backdrop-filter duration-300 ease-in-out ${
           navShow ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
@@ -65,12 +65,12 @@ const MobileNav = () => {
                   items={link.dropdown}
                   dropdownTrigger="click"
                   isMobile
-                  className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                  className="body-text-2xl-1 font-bold tracking-widest text-neutral-900 dark:text-neutral-100"
                 />
               ) : (
                 <Link
                   href={link.href}
-                  className="text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                  className="body-text-2xl-1 font-bold tracking-widest text-neutral-900 dark:text-neutral-100"
                   onClick={onToggleNav}
                 >
                   {link.title}
