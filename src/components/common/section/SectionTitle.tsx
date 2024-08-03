@@ -13,16 +13,16 @@ export default function SectionTitle({ text, tag, hasSubHeading, className }: Pr
   // Conditionally add class based on tag prop using switch case
   switch (tag) {
     case 'h1':
-      tagClassName = 'display-text-sm mb-14 text-center'
+      tagClassName = 'md:display-text-sm heading-text-lg mb-14 text-center'
       break
     case 'h2':
-      tagClassName = 'heading-text-md-1 mb-2'
+      tagClassName = 'md:heading-text-md-1 heading-text-sm-1 mb-2'
       break
     case 'h3':
-      tagClassName = 'heading-text-md-1'
+      tagClassName = 'md:heading-text-md-1 heading-text-sm-1'
       break
     default:
-      tagClassName = 'display-text-sm mb-14 text-center'
+      tagClassName = 'md:display-text-sm heading-text-lg mb-14 text-center'
       break
   }
   return (

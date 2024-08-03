@@ -6,25 +6,43 @@ const HomeCTA = () => {
   return (
     <SectionContainer>
       <div className="relative mb-40 mt-[80px] rounded-3xl bg-red-800 text-white [clip-path:xywh(0_0_100%_100%_round_24px)] dark:bg-red-900 ">
-        <div className="relative z-10 flex h-full w-full items-center justify-between px-32 py-24 ">
+        <div className="relative z-10 flex h-full w-full flex-col items-center justify-between gap-2 px-8 py-6 md:flex-row md:px-14 md:py-6 lg:px-16 lg:py-10 xl:px-20 xl:py-14 2xl:px-32 2xl:py-24 ">
           {/* Left Grid */}
           <div className="h-full w-full basis-1/2   ">
             {/* Content Title */}
-            <h1 className="display-text-md">Premium Equipment with Unmatched Support</h1>
+            <h1 className="xl:display-text-md lg:display-text-sm md:heading-text-lg heading-text-md-1 ">
+              Premium Equipment with Unmatched Support
+            </h1>
           </div>
 
           {/* Right Grid */}
           <div className="flex h-full w-full basis-1/2 flex-col gap-8">
             {/* Content Description */}
-            <p className="body-text-xl-2">
+            <p className="xl:body-text-xl-2  body-text-sm-3 md:body-text-md-3">
               Connecting innovation with reliability for your most demanding projects. Trust
               Savvytech to deliver excellence in every detail.
             </p>
-            <ButtonComponent
-              buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
-            >
-              Book a qoute
-            </ButtonComponent>
+            <div className="hidden lg:block">
+              <ButtonComponent
+                buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
+            <div className="hidden md:block lg:hidden">
+              <ButtonComponent
+                buttonStyle={{ size: 'md', padding: 'md', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
+            <div className="block md:hidden">
+              <ButtonComponent
+                buttonStyle={{ size: 'sm', padding: 'sm', color: 'white', align: 'left' }}
+              >
+                Book a qoute
+              </ButtonComponent>
+            </div>
           </div>
         </div>
 

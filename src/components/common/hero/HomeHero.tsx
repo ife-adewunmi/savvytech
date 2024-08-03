@@ -6,8 +6,8 @@ import SectionContainer from '@/components/common/section/SectionContainer'
 
 const HeroBanner = () => {
   return (
-    <SectionContainer className="mt-16">
-      <div className=" relative flex h-[590px] w-full flex-col items-center justify-between md:flex-row">
+    <SectionContainer className="mt-14 xl:mt-28">
+      <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">
         {/* Left Grid */}
         <div className="z-0 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7 2xl:pr-9  ">
           <div className="flex w-full flex-col gap-8 lg:gap-14">
@@ -53,7 +53,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Right Grid */}
-        <div className="mt-8 flex w-full basis-[55%] flex-col justify-center md:mt-0 md:h-[260px] lg:h-[390px] 2xl:h-[510px]">
+        <div className="mt-8 flex h-72 w-full flex-col justify-center md:mt-0 md:h-[260px] md:basis-[55%] lg:h-[390px] 2xl:h-[510px]">
           <div className="h-full w-full self-auto">
             <HeroCarousel autoplay />
           </div>
