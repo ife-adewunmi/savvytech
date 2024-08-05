@@ -2,14 +2,14 @@ import React from 'react'
 import HeroCarousel from '@/components/common/hero/HeroCarousel'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
-import SectionContainer from '@/components/SectionContainer'
+import SectionContainer from '@/components/common/section/SectionContainer'
 
 const HeroBanner = () => {
   return (
-    <SectionContainer>
-      <div className=" relative mb-40 mt-[80px] flex h-[590px] w-full flex-col items-center justify-between md:flex-row">
+    <SectionContainer className="mt-14 xl:mt-28">
+      <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">
         {/* Left Grid */}
-        <div className="z-50 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7  2xl:pr-9  ">
+        <div className="z-0 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7 2xl:pr-9  ">
           <div className="flex w-full flex-col gap-8 lg:gap-14">
             <div className="flex w-full flex-col gap-4 lg:gap-6">
               {/* Content Title */}
@@ -53,7 +53,7 @@ const HeroBanner = () => {
         </div>
 
         {/* Right Grid */}
-        <div className="flex w-full basis-[55%] flex-col justify-center md:h-[260px] lg:h-[390px] 2xl:h-[510px]">
+        <div className="mt-8 flex h-72 w-full flex-col justify-center md:mt-0 md:h-[260px] md:basis-[55%] lg:h-[390px] 2xl:h-[510px]">
           <div className="h-full w-full self-auto">
             <HeroCarousel autoplay />
           </div>

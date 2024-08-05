@@ -17,7 +17,7 @@ const HeroCarousel = ({ autoplay, interval }: HeroCarouselProps) => {
       autoplay={autoplay}
       interval={interval}
       controlClassName={
-        'absolute bg-white dark:bg-neutral-500 xl:py-3 xl:px-3.5 lg:py-2 lg:px-2.5 py-1 px-2 items-center justify-between drop-shadow-lg left-2 rounded-xl flex bottom-8 lg:gap-8 gap-5 flex-row'
+        'absolute bg-white dark:bg-neutral-500 xl:py-3 xl:px-3.5 lg:py-2 lg:px-2.5 py-1 px-2 items-center justify-between drop-shadow-lg md:left-2 left-0 rounded-xl flex md:bottom-8 bottom-0  lg:gap-8 gap-5 flex-row'
       }
       showIndicators={false}
       prevButton={prevButton}
@@ -25,8 +25,8 @@ const HeroCarousel = ({ autoplay, interval }: HeroCarouselProps) => {
       controlSeparator
       className="h-full"
     >
-      <div key={1} className="ml-10 h-full rounded-3xl bg-hero_image_1 bg-cover bg-center p-4" />
-      <div key={2} className="ml-10 h-full rounded-3xl bg-hero_image_2 bg-cover bg-center p-4" />
+      <div key={1} className="h-full rounded-3xl bg-hero_image_1 bg-cover bg-center p-4 md:ml-10" />
+      <div key={2} className="h-full rounded-3xl bg-hero_image_2 bg-cover bg-center p-4 md:ml-10" />
     </Carousel>
   )
 }

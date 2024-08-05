@@ -50,7 +50,7 @@
     @apply font-display text-5xl font-black leading-[3.9rem] tracking-[-0.031rem];
   }
   .display-text-sm {
-    @apply font-display text-[2.5rem] font-black leading-[3.25rem] tracking-[-0.031rem];
+    @apply font-display text-[2.5rem] font-bold leading-[3.25rem] tracking-[-0.031rem];
   }
   /* Heading text */
   .heading-text-lg {
@@ -60,13 +60,13 @@
     @apply font-display text-2xl font-bold tracking-tight;
   }
   .heading-text-md-2 {
-    @apply font-display text-2xl font-bold tracking-tight;
+    @apply font-display text-2xl font-normal tracking-tight;
   }
   .heading-text-sm-1 {
     @apply font-display text-lg font-bold tracking-tight;
   }
   .heading-text-sm-2 {
-    @apply font-display text-lg font-bold tracking-tight;
+    @apply font-display text-lg font-normal tracking-tight;
   }
 
   /* Body text */
@@ -237,5 +237,10 @@ input:-webkit-autofill:focus {
   @apply heading-text-md-1 mb-8 text-center;
 }
 .trusted-by-client-logos {
-  @apply mx-auto flex max-w-screen-md items-center justify-center space-x-9;
+  @apply mx-auto flex  items-center justify-center space-x-9 md:max-w-screen-md md:space-x-4 lg:space-x-7 xl:space-x-7;
+}
+
+/* Header wrapper */
+.header-wrapper {
+  @apply mx-auto max-w-3xl px-6 md:max-w-screen-md md:px-11 lg:max-w-screen-lg lg:px-20 xl:max-w-screen-xl xl:px-[7.75rem] 2xl:max-w-[1360px] 2xl:px-0;
 }

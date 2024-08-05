@@ -84,6 +84,7 @@ module.exports = {
         main_gradient: `linear-gradient(to right, #2D307A 0%, #452D84 52%, #EC2426 100%)`,
         main_gradient_hover: `linear-gradient(to right, #2D307A 0%, #452D84 77%, #EC2426 100%)`,
         card_gradient_hover: `linear-gradient(115deg, #EAEAF2 0%, #FEF8F8 44%, #FAFAFA 100%)`,
+        card_gradient_hover_dark: `linear-gradient(115deg, #10133B 0%, #250B19 44%, #1E293B 100%)`,
         'hero-pattern': "url('/static/images/svgs/worldmap_dot_pattern.svg')",
         'hero-pattern_dark': "url('/static/images/svgs/worldmap_dot_pattern_dark.svg')",
         'dot-pattern': "url('/static/images/svgs/bg_dot_pattern.svg')",

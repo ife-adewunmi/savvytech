@@ -17,7 +17,7 @@ export const baseButton = tv({
         'text-neutral-700 bg-white drop-shadow-md hover:drop-shadow-lg hover:text-white hover:bg-primary-900',
       outline:
         'text-primary-900 dark:text-neutral-50 outline outline-1 dark:outline-neutral-50 outline-primary-900 dark:hover:text-primary-900 dark:hover:bg-neutral-50  hover:text-white  hover:bg-primary-900',
-      text_link: 'px-0 text-icon text-primary-700',
+      text_link: 'px-0 text-icon text-primary-700 dark:text-primary-50',
     },
     padding: {
       lg: 'py-[1.375rem]',
