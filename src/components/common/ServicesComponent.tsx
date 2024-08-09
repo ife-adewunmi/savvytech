@@ -1,8 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Service } from '@/data/servicesData'
-// import SectionContainer from '../SectionContainer'
-import LayoutContainer from '../LayoutContainer'
+import { Service } from '@/data/products/servicesData'
 import ButtonComponent from './button/ButtonComponent'
 import SectionTitle from '@/components/common/section/SectionTitle'
 

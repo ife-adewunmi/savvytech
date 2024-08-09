@@ -3,8 +3,14 @@ import HeroCarousel from '@/components/common/hero/HeroCarousel'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 import SectionContainer from '@/components/common/section/SectionContainer'
+import { Client } from '@/data/clientsData'
+import { Hero } from '@/data/hero/heroData'
 
-const HeroBanner = () => {
+interface HomeHeroProps {
+  heroData: Hero
+}
+
+const HeroBanner = ({ heroData }: HomeHeroProps) => {
   return (
     <SectionContainer className="mt-14 xl:mt-28">
       <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">
@@ -13,15 +19,13 @@ const HeroBanner = () => {
           <div className="flex w-full flex-col gap-8 lg:gap-14">
             <div className="flex w-full flex-col gap-4 lg:gap-6">
               {/* Content Title */}
-
               <h1 className="2xl:display-text-lg xl:display-text-md heading-text-lg lg:display-text-sm text-neutral-900 dark:text-neutral-10">
-                Engineering Excellence for Energy and Beyond
+                {heroData.title}
               </h1>
 
               {/* Content Description */}
               <p className="2xl:body-text-2xl-2 body-text-md-2 xl:body-text-xl-2  text-neutral-600 dark:text-neutral-200">
-                From engineering to procurement, Savvytech Limited offers unparalleled expertise and
-                reliable services to West Africa's vital industries.
+                {heroData.description}
               </p>
             </div>
 
@@ -30,7 +34,7 @@ const HeroBanner = () => {
                 buttonStyle={{ size: 'lg', padding: 'lg', color: 'primary', align: 'left' }}
                 rightIcon={<FaArrowRightLong size={24} />}
               >
-                Book a qoute
+                {heroData.btnTitle}
               </ButtonComponent>
             </div>
             <div className="hidden md:block lg:hidden">
@@ -38,7 +42,7 @@ const HeroBanner = () => {
                 buttonStyle={{ size: 'md', padding: 'md', color: 'primary', align: 'left' }}
                 rightIcon={<FaArrowRightLong size={24} />}
               >
-                Book a qoute
+                {heroData.btnTitle}
               </ButtonComponent>
             </div>
             <div className="block md:hidden">
@@ -46,7 +50,7 @@ const HeroBanner = () => {
                 buttonStyle={{ size: 'sm', padding: 'sm', color: 'primary', align: 'left' }}
                 rightIcon={<FaArrowRightLong size={24} />}
               >
-                Book a qoute
+                {heroData.btnTitle}
               </ButtonComponent>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
-import LogoFooter from '@/data/logo_footer.svg'
-import LogoFooterMobile from '@/data/logo_footer_mobile.svg'
+import LogoFooter from '@/data/logo/logo_footer.svg'
+import LogoFooterMobile from '@/data/logo/logo_footer_mobile.svg'
 import SocialIcon from './social-icons'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 

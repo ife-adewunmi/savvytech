@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from '@/data/projectsData'
+import { Project } from '@/data/products/projectsData'
 import Image from '@/components/Image'
 import SectionContainer from '../common/section/SectionContainer'
 import { FaArrowRightLong } from 'react-icons/fa6'
