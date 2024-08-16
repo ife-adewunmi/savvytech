@@ -16,14 +16,7 @@ export default function Page() {
   return (
     <>
       <AboutUsHeroBanner heroData={aboutHeroData} />
-
       <AboutUsBody />
-
-      {/* OurPassion */}
-
-      {/* BackGroundImage */}
-
-      {/* OurClients */}
 
       {/*<AuthorLayout content={mainContent}>*/}
       {/*  <MDXLayoutRenderer code={author.body.code} />*/}

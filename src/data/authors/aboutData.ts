@@ -19,7 +19,8 @@ export const aboutHeroData: AboutBase = {
 export const ourHistoryData: AboutBase = {
   title: 'A Short History',
   description: `From engineering to procurement, Savvytech Limited offers unparalleled expertise and
-                reliable services to West Africa's vital industries.`,
+                reliable services to West Africa's vital industries.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque magni hic molestias minus numquam rerum ea sequi delectus! Magni accusamus ea iusto rem quod perferendis tempora qui quia distinctio aliquam.`,
 }
 
 export const ourPassionData: Passion = {
