@@ -53,13 +53,13 @@ const Carousel = ({
   }, [autoplay, interval, children.length, handleNext])
 
   const defaultPrevButton = (
-    <button className={'m-4 h-8 w-8 rounded-full bg-slate-200 cursor-pointer'} onClick={handlePrev}>
+    <button className={'m-4 h-8 w-8 cursor-pointer rounded-full bg-slate-200'} onClick={handlePrev}>
       {'<'}
     </button>
   )
 
   const defaultNextButton = (
-    <button className={'m-4 h-8 w-8 rounded-full bg-slate-200 cursor-pointer'} onClick={handleNext}>
+    <button className={'m-4 h-8 w-8 cursor-pointer rounded-full bg-slate-200'} onClick={handleNext}>
       {'>'}
     </button>
   )
