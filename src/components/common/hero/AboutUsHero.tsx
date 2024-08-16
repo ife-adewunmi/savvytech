@@ -1,10 +1,10 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { Hero } from '@/data/hero/heroData'
+import { AboutBase } from '@/data/authors/aboutData'
 import HeroImage from '@/components/common/hero/HeroImage'
 
 interface AboutHeroProps {
-  heroData: Hero
+  heroData: AboutBase
 }
 
 const AboutUsHeroBanner = ({ heroData }: AboutHeroProps) => {

@@ -5,6 +5,7 @@ import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
 import AboutUsHeroBanner from '@/components/common/hero/AboutUsHero'
 import { aboutHeroData } from '@/data/hero/heroData'
+import AboutUsBody from '@/components/about/AboutUsBody'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
@@ -16,7 +17,7 @@ export default function Page() {
     <>
       <AboutUsHeroBanner heroData={aboutHeroData} />
 
-      {/* OurHistory */}
+      <AboutUsBody />
 
       {/* OurPassion */}
 

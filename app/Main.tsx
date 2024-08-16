@@ -1,8 +1,8 @@
 import projectsData from '@/data/products/projectsData'
-import clientsData from '@/data/clientsData'
+import { trustedByData } from '@/data/clientsData'
 import servicesData from '@/data/products/servicesData'
 import HomeHero from '@/components/common/hero/HomeHero'
-import TrustedBy from '@/components/common/ClientsComponent'
+import TrustedBy from '@/components/common/TrustedBy'
 import WhatWeDo from '@/components/common/ServicesComponent'
 import HomeCTA from '@/components/common/call-to-action/HomeCTA'
 import OurProduct from '@/components/product/OurProduct'
@@ -16,7 +16,7 @@ export default function Home({ posts }) {
 
       <HomeHero heroData={homeHeroData} />
 
-      <TrustedBy clientsData={clientsData} />
+      <TrustedBy trustedByData={trustedByData} />
 
       <WhatWeDo servicesData={servicesData} />
 
