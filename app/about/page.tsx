@@ -3,6 +3,8 @@ import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import AuthorLayout from '@/layouts/AuthorLayout'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
+import AboutUsHeroBanner from '@/components/common/hero/AboutUsHero'
+import { aboutHeroData } from '@/data/hero/heroData'
 
 export const metadata = genPageMetadata({ title: 'About' })
 
@@ -12,9 +14,19 @@ export default function Page() {
 
   return (
     <>
-      <AuthorLayout content={mainContent}>
-        <MDXLayoutRenderer code={author.body.code} />
-      </AuthorLayout>
+      <AboutUsHeroBanner heroData={aboutHeroData} />
+
+      {/* OurHistory */}
+
+      {/* OurPassion */}
+
+      {/* BackGroundImage */}
+
+      {/* OurClients */}
+
+      {/*<AuthorLayout content={mainContent}>*/}
+      {/*  <MDXLayoutRenderer code={author.body.code} />*/}
+      {/*</AuthorLayout>*/}
     </>
   )
 }
