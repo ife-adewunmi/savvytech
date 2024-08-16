@@ -8,9 +8,9 @@ interface HeroCarouselProps {
 }
 
 const HeroCarousel = ({ autoplay, interval }: HeroCarouselProps) => {
-  const prevButton = <FaArrowLeftLong className={`text-base lg:text-lg xl:text-2xl`} />
+  const prevButton = <FaArrowLeftLong className={`text-base lg:text-lg xl:text-2xl cursor-pointer`} />
 
-  const nextButton = <FaArrowRightLong className={`text-base lg:text-lg xl:text-2xl`} />
+  const nextButton = <FaArrowRightLong className={`text-base lg:text-lg xl:text-2xl cursor-pointer`} />
 
   return (
     <Carousel
