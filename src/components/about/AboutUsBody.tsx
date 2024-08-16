@@ -12,16 +12,16 @@ import { clientsData } from '@/data/clientsData'
 const AboutUsBody = () => {
   return (
     <>
-      <SectionContainer >
+      <SectionContainer>
         <OurHistory ourHistoryData={ourHistoryData} />
         <OurPassion ourPassionData={ourPassionData} />
       </SectionContainer>
 
-      <LayoutContainer className={''} >
+      <LayoutContainer className={''}>
         <Image
           src={'/static/images/hero_img_1.jpg'}
           alt={`logo`}
-          className=''
+          className=""
           width={100}
           height={100}
         />
@@ -29,7 +29,7 @@ const AboutUsBody = () => {
 
       <OurClients clientsData={clientsData} />
     </>
-  );
+  )
 }
 
 export default AboutUsBody

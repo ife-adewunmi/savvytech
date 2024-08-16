@@ -55,12 +55,11 @@ export const trustedByData: TrustedClient = {
       width: 0,
       height: 0,
     },
-  ]
-};
+  ],
+}
 
-export const clientsData: Client =
-  {
-    title: 'Our Clients',
-    description: '',
-    clients: ['one', 'two']
-  };
+export const clientsData: Client = {
+  title: 'Our Clients',
+  description: '',
+  clients: ['one', 'two'],
+}

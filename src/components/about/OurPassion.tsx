@@ -14,7 +14,7 @@ const OurPassion = ({ ourPassionData }: OurHistoryProps) => {
   return (
     <div className="relative my-20 bg-neutral-50 py-20 dark:bg-neutral-800 lg:my-40">
       <div className="header-wrapper mx-auto">
-        <SectionTitle text={ourPassionData.title} tag='h1' className={''}/>
+        <SectionTitle text={ourPassionData.title} tag="h1" className={''} />
       </div>
       <div className="flex transform flex-row justify-between">
         {ourPassionData.attributes.map((passion, index) => (

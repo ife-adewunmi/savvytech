@@ -1,6 +1,3 @@
-// import { JSXElementConstructor } from "react"
-// import { IconType } from "react-icons"
-
 export interface AboutBase {
   title: string
   description?: string
@@ -14,7 +11,6 @@ export interface PassionAttributes {
   title: string
   icon?: string
 }
-
 
 export const aboutHeroData: AboutBase = {
   title: 'Transforming engineering and procurement industries since 1991',
@@ -33,13 +29,13 @@ export const ourPassionData: Passion = {
       title: 'Engineering & Technical',
     },
     {
-      title: 'Procurement Services'
+      title: 'Procurement Services',
     },
     {
-      title: 'Tested Professionals'
+      title: 'Tested Professionals',
     },
     {
-      title: 'Quality Products'
+      title: 'Quality Products',
     },
-  ]
+  ],
 }

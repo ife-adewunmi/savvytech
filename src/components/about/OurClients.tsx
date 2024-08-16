@@ -11,16 +11,10 @@ interface ClientsProps {
 const OurClients = ({ clientsData }: ClientsProps) => {
   return (
     <SectionContainer className="relative hidden md:block">
-      <SectionTitle
-        text={clientsData.title}
-        tag="h3"
-        className="mb-14 text-center"
-      ></SectionTitle>
+      <SectionTitle text={clientsData.title} tag="h3" className="mb-14 text-center"></SectionTitle>
       <div className="our-client opacity-90">
         {clientsData.clients.map((client, index) => (
-          <>
-            
-          </>
+          <></>
         ))}
       </div>
     </SectionContainer>
