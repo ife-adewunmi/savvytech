@@ -16,11 +16,13 @@ const open_sans = Open_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-open-sans',
+  adjustFontFallback: false,
 })
 const georama = Georama({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-georama',
+  adjustFontFallback: false,
 })
 
 export const metadata: Metadata = {

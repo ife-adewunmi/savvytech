@@ -14,16 +14,19 @@ const AboutUsBody = () => {
     <>
       <SectionContainer>
         <OurHistory ourHistoryData={ourHistoryData} />
+
         <OurPassion ourPassionData={ourPassionData} />
       </SectionContainer>
 
-      <LayoutContainer className={''}>
+      <LayoutContainer className={'relative h-[25rem] lg:h-[35rem]'}>
         <Image
-          src={'/static/images/hero_img_1.jpg'}
+          src={'/static/images/aboutImage/solar_view.jpg'}
           alt={`logo`}
-          className=""
-          width={100}
-          height={100}
+          className="h-full object-cover"
+          // width={100}
+          // height={200}
+          objectFit="cover"
+          fill
         />
       </LayoutContainer>
 

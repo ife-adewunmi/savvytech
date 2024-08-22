@@ -12,22 +12,22 @@ const HeroImage = () => {
 
   return (
     <div className="h-full">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid h-full grid-cols-2 gap-4">
         <div
           key={1}
-          className="h-full rounded-3xl bg-hero_image_1 bg-cover bg-center p-4 md:ml-10"
+          className="h-full rounded-2xl bg-about_img_1 bg-contain bg-right  bg-no-repeat "
         />
         <div
           key={2}
-          className="h-full rounded-3xl bg-hero_image_2 bg-cover bg-center p-4 md:ml-10"
+          className="h-full rounded-2xl bg-about_img_2 bg-cover bg-bottom bg-no-repeat "
         />
         <div
           key={3}
-          className="h-full rounded-3xl bg-hero_image_1 bg-cover bg-center p-4 md:ml-10"
+          className="h-full rounded-2xl bg-about_img_3 bg-contain bg-right-top bg-no-repeat "
         />
         <div
           key={4}
-          className="h-full rounded-3xl bg-hero_image_2 bg-cover bg-center p-4 md:ml-10"
+          className="h-full rounded-2xl bg-about_img_4 bg-contain bg-left bg-no-repeat "
         />
       </div>
     </div>

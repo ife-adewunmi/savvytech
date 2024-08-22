@@ -60,6 +60,6 @@ export const trustedByData: TrustedClient = {
 
 export const clientsData: Client = {
   title: 'Our Clients',
-  description: '',
-  clients: ['one', 'two'],
+  description: 'We have large client base, which includes companies such as:',
+  clients: ['1', '2', '3', '4', '5', '6', 'one', 'two', 'one', 'two', 'one', 'two', 'one', 'two'],
 }
