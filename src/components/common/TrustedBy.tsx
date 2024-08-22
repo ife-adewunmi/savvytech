@@ -1,25 +1,25 @@
 import React from 'react'
 import Image from 'next/image'
-import { Client } from '@/data/clientsData'
-import SectionContainer from './section/SectionContainer'
+import { TrustedClient } from '@/data/clientsData'
+import SectionContainer from '@/components/common/section/SectionContainer'
 import SectionTitle from '@/components/common/section/SectionTitle'
 
 interface TrustedByProps {
-  clientsData: Array<Client>
+  trustedByData: TrustedClient
   width?: number
   height?: number
 }
 
-const TrustedBy = ({ clientsData, width, height }: TrustedByProps) => {
+const TrustedBy = ({ trustedByData, width, height }: TrustedByProps) => {
   return (
     <SectionContainer className="relative hidden md:block">
       <SectionTitle
-        text={'Trusted in the industry by'}
+        text={trustedByData.title}
         tag="h3"
         className="mb-14 text-center"
       ></SectionTitle>
       <div className="trusted-by-client-logos opacity-90">
-        {clientsData.map((client, index) => (
+        {trustedByData.clients.map((client, index) => (
           <>
             <Image
               key={index}
