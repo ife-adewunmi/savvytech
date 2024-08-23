@@ -21,10 +21,13 @@ const OurPassion = ({ ourPassionData }: OurHistoryProps) => {
       </div>
       <div className="grid transform grid-cols-1 justify-between gap-6 md:grid-cols-2 xl:grid-cols-4 ">
         {ourPassionData.attributes.map((passion, index) => (
-          <div key={index} className="flex items-center gap-4 rounded-xl bg-white dark:bg-neutral-800 p-4 shadow-md">
-            <div className="rounded bg-purple-50 dark:bg-neutral-400 p-4">
+          <div
+            key={index}
+            className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-md dark:bg-neutral-800"
+          >
+            <div className="rounded bg-purple-50 p-4 dark:bg-neutral-400">
               {passion.icon === 'wheel' && (
-                <AiFillSetting size={passion.iconSize} color={passion.iconColour}  />
+                <AiFillSetting size={passion.iconSize} color={passion.iconColour} />
               )}
               {passion.icon === 'bag' && (
                 <AiFillShopping size={passion.iconSize} color={passion.iconColour} />
