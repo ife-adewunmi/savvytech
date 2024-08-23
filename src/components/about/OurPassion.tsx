@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { Service } from '@/data/products/servicesData'
-import ButtonComponent from '@/components/common/button/ButtonComponent'
 import SectionTitle from '@/components/common/section/SectionTitle'
 import { Passion } from '@/data/authors/aboutData'
 import { AiFillSetting, AiFillLike, AiFillShopping } from 'react-icons/ai'
@@ -22,8 +21,11 @@ const OurPassion = ({ ourPassionData }: OurHistoryProps) => {
       </div>
       <div className="grid transform grid-cols-1 justify-between gap-6 md:grid-cols-2 xl:grid-cols-4 ">
         {ourPassionData.attributes.map((passion, index) => (
-          <div key={index} className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-md">
-            <div className="rounded bg-purple-50 p-4">
+          <div
+            key={index}
+            className="flex items-center gap-4 rounded-xl bg-white p-4 shadow-md dark:bg-neutral-800"
+          >
+            <div className="rounded bg-purple-50 p-4 dark:bg-neutral-400">
               {passion.icon === 'wheel' && (
                 <AiFillSetting size={passion.iconSize} color={passion.iconColour} />
               )}
