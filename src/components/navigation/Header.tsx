@@ -23,7 +23,7 @@ const Header = () => {
         </div>
       </Link>
 
-      <div className="flex items-center xl:space-x-10">
+      <div className="flex items-center lg:space-x-5 xl:space-x-10">
         {headerNavLinks.map((link) => (
           <div key={link.title} className="relative">
             {link?.dropdown ? (
@@ -31,14 +31,14 @@ const Header = () => {
                 title={link.title}
                 items={link.dropdown}
                 className={
-                  'cta-text-md hidden cursor-pointer text-neutral-400 hover:text-neutral-600 dark:text-neutral-10 lg:block'
+                  'cta-text-sm xl:cta-text-md hidden cursor-pointer text-neutral-400 hover:text-neutral-600 dark:text-neutral-10 lg:block'
                 }
               />
             ) : (
               <Link
                 key={link.title}
                 href={link.href}
-                className="cta-text-md hidden text-neutral-400 hover:text-neutral-600 dark:text-neutral-10 lg:block"
+                className="cta-text-sm xl:cta-text-md hidden text-neutral-400 hover:text-neutral-600 dark:text-neutral-10 lg:block"
               >
                 {link.title}
               </Link>
