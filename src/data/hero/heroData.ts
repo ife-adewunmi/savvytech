@@ -2,6 +2,7 @@ export interface Hero {
   title: string
   description?: string
   btnTitle?: string
+  imgSrc?: string
 }
 
 export const homeHeroData: Hero = {

@@ -1,4 +1,4 @@
-import projectsData from '@/data/products/projectsData'
+import { productsData } from '@/data/products/productsData'
 import { trustedByData } from '@/data/clientsData'
 import servicesData from '@/data/products/servicesData'
 import HomeHero from '@/components/common/hero/HomeHero'
@@ -21,7 +21,7 @@ export default function Home({ posts }) {
       <WhatWeDo servicesData={servicesData} />
 
       <div className=" z-0 h-full w-full bg-dot-pattern bg-no-repeat dark:bg-dot-pattern_dark">
-        <OurProduct productsData={projectsData} />
+        <OurProduct productsData={productsData} />
         <HomeCTA />
       </div>
 

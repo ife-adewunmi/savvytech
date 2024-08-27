@@ -1,4 +1,4 @@
-import projectsData from '@/data/products/projectsData'
+import { productsData } from '@/data/products/productsData'
 import Card from '@/components/Card'
 import { genPageMetadata } from 'app/seo'
 
@@ -18,7 +18,7 @@ export default function Projects() {
         </div>
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
-            {projectsData.map((d) => (
+            {productsData.map((d) => (
               <Card
                 key={d.title}
                 title={d.title}
