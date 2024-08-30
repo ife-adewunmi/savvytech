@@ -5,5 +5,5 @@ export enum Page {
   PROJECT = '/projects',
   SEARCH = '/search',
   BLOG = '/blog',
-  CONTACT_US = '/contact-us',
+  CONTACT_US = '/contact',
 }

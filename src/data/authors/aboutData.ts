@@ -20,7 +20,7 @@ export const aboutHeroData: AboutBase = {
 
 export const ourHistoryData: AboutBase = {
   title: 'A Short History',
-  description: `Savvytech Limited commenced operations in 1991 as a limited liability company geared towards engineering services and procurement for the Energy, Oil & Gas, Construction and Mining industries.  The main focus of the company is the provision of turn-key services to assist clients accomplish operations in West Africa. The company’s Head Office is in Lagos, Nigeria with Operations Offices located in Port Harcourt, Nigeria and Accra, Ghana.
+  description: `Savvytech Limited commenced operations in 1991 as a limited liability company geared towards engineering services and procurement for the Energy, Oil & Gas, Construction and Mining industries. The main focus of the company is the provision of turn-key services to assist clients accomplish operations in West Africa. The company’s Head Office is in Lagos, Nigeria with Operations Offices located in Port Harcourt, Nigeria and Accra, Ghana.
 Using the products and services available through Savvytech will result in cost savings to your organisation. Our confidence is based on the fact that we add value to the products and services of our Principals by modifying them to peculiar market needs.
 To this end we have developed services and worked on projects that employ the products and knowledge of our principals in novel ways in the search for solutions for our clients.`,
 }
