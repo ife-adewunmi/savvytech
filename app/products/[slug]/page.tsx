@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { Product, productsData } from '@/data/products/productsData'
 import NotFound from '../../not-found'
 import Link from '@/components/Link'
