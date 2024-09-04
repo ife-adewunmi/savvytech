@@ -20,7 +20,9 @@ const OurProduct = ({ productsData }: OurProductProps) => {
         <Link href={'/#'}>
           <div className="grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2">
             {initialDisplay.map((product, index) => (
-              <ProductCard index={index} product={product} />
+              <div key={index}>
+                <ProductCard index={index} product={product} />
+              </div>
             ))}
           </div>
         </Link>

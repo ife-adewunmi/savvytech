@@ -6,18 +6,18 @@ import Link from '@/components/Link'
 import { Product } from '@/data/products/productsData'
 
 interface ProductCardProps {
-  index: number
+  index?: number
   product: Product
 }
 
 const ProductCard = ({ index, product }: ProductCardProps) => {
   return (
-    <Link href={product.buttonText && product.href ? product.href : '/#'}>
-      <div
-        key={index}
-        className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12 shadow-md
-                    transition duration-300 ease-in-out hover:scale-105 hover:bg-card_gradient_hover hover:shadow-xl dark:bg-slate-700  dark:hover:bg-card_gradient_hover_dark"
-      >
+    <div
+      key={index}
+      className="flex transform flex-col justify-between gap-6 rounded-3xl bg-white px-8 py-12 shadow-md
+                  transition duration-300 ease-in-out hover:scale-105 hover:bg-card_gradient_hover hover:shadow-xl dark:bg-slate-700  dark:hover:bg-card_gradient_hover_dark"
+    >
+      <Link href={product.buttonText && product.href ? product.href : '/#'}>
         <div>
           <h3 className="heading-text-md-1 mb-4 text-neutral-800 dark:text-neutral-50">
             {product.title}
@@ -45,8 +45,8 @@ const ProductCard = ({ index, product }: ProductCardProps) => {
             height={100}
           />
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   )
 }
 

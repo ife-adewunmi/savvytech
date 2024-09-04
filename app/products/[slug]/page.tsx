@@ -22,7 +22,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     <>
       {!!product.content &&
         product.content.map((content, index) => (
-          <div className="flex min-h-screen flex-col">
+          <div key={index} className="flex min-h-screen flex-col">
             <div className="sticky top-0 z-0 h-screen">
               <p className="mb-4 text-sm text-gray-500">
                 <Link href={Page.PRODUCT}>Products </Link>
