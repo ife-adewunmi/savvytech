@@ -7,7 +7,7 @@ import ButtonComponent from '@/components/common/button/ButtonComponent'
 
 export default function Footer() {
   return (
-    <footer className="flex h-full flex-col items-start gap-10 bg-neutral-800 px-5 py-16 sm:px-6 md:px-11 md:pb-20 lg:px-20  xl:px-56">
+    <footer className="relative z-10 flex h-full flex-col items-start gap-10 bg-neutral-800 px-5 py-16 sm:px-6 md:px-11 md:pb-20 lg:px-20  xl:px-56">
       <div>
         <div className="block md:hidden">
           <LogoFooterMobile />

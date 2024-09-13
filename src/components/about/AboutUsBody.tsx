@@ -25,7 +25,7 @@ const AboutUsBody = () => {
           className="h-full object-cover"
           // width={100}
           // height={200}
-          objectFit="cover"
+          // objectFit="cover"
           fill
         />
       </LayoutContainer>

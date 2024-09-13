@@ -6,9 +6,10 @@ export const MANITOWOC_DATA: Product = {
   description: `Manitowoc is committed to providing the most innovative, 
     advanced and comprehensive range of lifting solutions with products 
     that have long set the standard for excellence worldwide`,
-  logo: '/static/images/manitowoc.png',
+  logo: 'bg-about_img_1',
   href: Page.PRODUCT.concat('/manitowoc'),
   buttonText: 'Read more',
+  color: 'bg-secondary-800',
   content: [
     {
       breadcrumb: '',

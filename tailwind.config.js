@@ -97,6 +97,8 @@ module.exports = {
         about_img_2: "url('/static/images/aboutImage/about_img_2.svg')",
         about_img_3: "url('/static/images/aboutImage/about_img_3.svg')",
         about_img_4: "url('/static/images/aboutImage/about_img_4.svg')",
+        manitowoc_img: "url('/static/images/productImages/manitowoc.svg')",
+        donaldson_img: "url('/static/images/productImages/donaldson.svg')",
       }),
       typography: ({ theme }) => ({
         DEFAULT: {

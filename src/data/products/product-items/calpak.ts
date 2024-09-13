@@ -6,9 +6,10 @@ export const CALPAK_DATA: Product = {
   description: `What if you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking
     for.`,
-  logo: '/static/images/calpak.png',
+  logo: '/static/images/productImages/calpak.svg',
   href: Page.PRODUCT.concat('/calpak'),
   buttonText: 'Read more',
+  color: 'bg-green',
   content: [
     {
       breadcrumb: '',

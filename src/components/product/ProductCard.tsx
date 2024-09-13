@@ -40,7 +40,7 @@ const ProductCard = ({ index, product }: ProductCardProps) => {
           <Image
             src={product.logo || ''}
             alt={`${product.title} logo`}
-            className="float-end mt-4 h-14 w-48 object-contain"
+            className="float-end mt-4 h-14 w-40 object-contain"
             width={100}
             height={100}
           />

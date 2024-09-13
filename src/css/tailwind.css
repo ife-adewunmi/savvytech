@@ -244,3 +244,6 @@ input:-webkit-autofill:focus {
 .header-wrapper {
   @apply mx-auto max-w-3xl px-6 md:max-w-screen-md md:px-11 lg:max-w-screen-lg lg:px-20 xl:max-w-screen-xl xl:px-[7.75rem] 2xl:max-w-[1360px] 2xl:px-0;
 }
+.header-wrapper-2 {
+  @apply mx-auto max-w-3xl  px-0  md:max-w-screen-md lg:max-w-screen-lg  xl:max-w-screen-xl 2xl:max-w-[1360px];
+}

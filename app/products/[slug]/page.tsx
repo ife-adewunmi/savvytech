@@ -1,16 +1,20 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { Product, productsData } from '@/data/products/productsData'
 import NotFound from '../../not-found'
 import Link from '@/components/Link'
 import { Page } from '@/enums/page'
-
-export async function generateStaticParams() {
-  return productsData.map((product) => ({
-    slug: product.href ? product.href.split('/').pop() : '',
-  }))
-}
+import Image from 'next/image'
+import ButtonComponent from '@/components/common/button/ButtonComponent'
+import SectionContainer from '@/components/common/section/SectionContainer'
 
 export default function ProductPage({ params }: { params: { slug: string } }) {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
   const product: Product | undefined = productsData.find((p) =>
     p.href ? p.href.split('/').pop() === params.slug : ''
   )
@@ -18,38 +22,71 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     return <NotFound />
   }
 
+  if (!isClient) return null
+
   return (
     <>
       {!!product.content &&
         product.content.map((content, index) => (
-          <div key={index} className="flex min-h-screen flex-col">
-            <div className="sticky top-0 z-0 h-screen">
-              <p className="mb-4 text-sm text-gray-500">
-                <Link href={Page.PRODUCT}>Products </Link>
-                <span>/ {content.breadcrumb?.toUpperCase() || product.title.toLowerCase()}</span>
-              </p>
+          <div key={index} className="">
+            <div
+              className={`${product.color} fixed top-0 -z-50 h-full w-full bg-secondary-900 lg:w-2/4`}
+            />
+            <SectionContainer className="mt-14 min-h-96 xl:mt-28">
+              <div className="header-wrapper-2 fixed -z-20 mx-auto flex flex-col lg:flex-row">
+                <div className="flex basis-1/2 flex-col text-center text-neutral-10 lg:p-6 lg:text-start">
+                  <p className="cta-text-sm mb-12">
+                    <Link href={Page.PRODUCT}>Products </Link>
+                    <span>
+                      / {content.breadcrumb?.toUpperCase() || product.title.toLowerCase()}
+                    </span>
+                  </p>
 
-              <div className="mb-12">
-                <h1 className="mb-4 text-5xl font-bold text-white">{product.title}</h1>
-                <p className="mb-6 text-xl text-white">{product.description}</p>
-                <button className="rounded bg-white px-6 py-2 font-semibold text-blue-600 transition duration-300 hover:bg-blue-50">
-                  CONTACT US
-                </button>
+                  <div className="">
+                    <div className="mb-8">
+                      <h1 className="xl:display-text-lg display-text-sm lg:display-text-md  mb-6 font-bold">
+                        {product.title}
+                      </h1>
+                      <p className="body-text-2xl-3">{product.description}</p>
+                    </div>
+                    <div className="hidden lg:block">
+                      <ButtonComponent
+                        buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
+                      >
+                        Contact us
+                      </ButtonComponent>
+                    </div>
+                    <div className="hidden md:block lg:hidden">
+                      <ButtonComponent
+                        buttonStyle={{ size: 'md', padding: 'md', color: 'white', align: 'left' }}
+                      >
+                        Contact us
+                      </ButtonComponent>
+                    </div>
+                    <div className="block md:hidden">
+                      <ButtonComponent
+                        buttonStyle={{ size: 'sm', padding: 'sm', color: 'white', align: 'left' }}
+                      >
+                        Contact us
+                      </ButtonComponent>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full basis-1/2 p-16">
+                  <div className="h-full">
+                    <div className="grid h-full grid-cols-1 gap-4">
+                      <div
+                        key={1}
+                        className={`h-full rounded-2xl ${product.logo} bg-contain bg-right  bg-no-repeat`}
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              {/*<div className="absolute inset-0 bg-blue-600">*/}
-              {/*    <Image*/}
-              {/*        src={product.logo}*/}
-              {/*        alt={product.title}*/}
-              {/*        layout="fill"*/}
-              {/*        objectFit="cover"*/}
-              {/*        className="mix-blend-overlay opacity-50"*/}
-              {/*    />*/}
-              {/*</div>*/}
-            </div>
+            </SectionContainer>
 
             {/* Content Section */}
-            <div className="relative z-10 mt-[80vh] bg-white">
+            <div className=" h-full bg-white">
               <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
                 {!!content.pageContent &&
                   content.pageContent.map((item, index) => (

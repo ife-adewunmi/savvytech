@@ -20,6 +20,7 @@ export interface Base {
 export interface Product extends Base {
   logo: string
   content?: Array<ProductContent>
+  color?: string
 }
 
 export interface ProductContent {

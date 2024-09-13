@@ -6,7 +6,7 @@ export const DONALSON_DATA: Product = {
   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-  logo: '/static/images/donalson.png',
+  logo: 'bg-donaldson_img',
   href: Page.PRODUCT.concat('/donaldson'),
   buttonText: 'Read more',
   content: [
