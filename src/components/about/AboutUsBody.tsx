@@ -20,12 +20,10 @@ const AboutUsBody = () => {
 
       <LayoutContainer className={'relative h-[25rem] lg:h-[35rem]'}>
         <Image
-          src={'/static/images/aboutImage/solar_view.jpg'}
+          src={'/static/images/about/solar_view.jpg'}
           alt={`logo`}
           className="h-full object-cover"
-          // width={100}
-          // height={200}
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
           fill
         />
       </LayoutContainer>
