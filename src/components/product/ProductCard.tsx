@@ -1,5 +1,5 @@
 'use client'
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 import { FaArrowRightLong } from 'react-icons/fa6'

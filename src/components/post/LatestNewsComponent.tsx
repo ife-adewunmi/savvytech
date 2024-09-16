@@ -25,35 +25,35 @@ interface NewsItemProps {
 const MAX_DISPLAY = 3
 
 const NewsItem = ({ title, slug, images, date, summary }: NewsItemProps) => {
-    return (
-        <div key={slug} className="overflow-hidden rounded-3xl bg-white shadow-md dark:bg-slate-700">
-        <Link
-            href={`/blog/${slug}`}
-            className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
-            aria-label={`Read more: "${title}"`}
-        >
-            <Image
-                src={images ? images[0] : '/static/images/svgs/logo.svg'}
-                alt={title}
-                width={400}
-                height={300}
-                className="h-48 w-full object-cover"
-            />
-            <div className="px-6 pb-8 pt-4">
-                <time
-                    className="label-text-sm md:label-text-md-1 text-neutral-400 dark:text-neutral-100"
-                    dateTime={date}
-                >{`new • ${formatDate(date, siteMetadata.locale)}`}</time>
-                <div className="mt-2">
-                    <SectionTitle tag={'h2'} text={title}></SectionTitle>
-                    <p className="md:body-text-md-3 body-text-sm-3  line-clamp-3 text-neutral-500 dark:text-neutral-100">
-                        {summary}
-                    </p>
-                </div>
-            </div>
-        </Link>
+  return (
+    <div key={slug} className="overflow-hidden rounded-3xl bg-white shadow-md dark:bg-slate-700">
+      <Link
+        href={`/blog/${slug}`}
+        className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+        aria-label={`Read more: "${title}"`}
+      >
+        <Image
+          src={images ? images[0] : '/static/images/svgs/logo.svg'}
+          alt={title}
+          width={400}
+          height={300}
+          className="h-48 w-full object-cover"
+        />
+        <div className="px-6 pb-8 pt-4">
+          <time
+            className="label-text-sm md:label-text-md-1 text-neutral-400 dark:text-neutral-100"
+            dateTime={date}
+          >{`new • ${formatDate(date, siteMetadata.locale)}`}</time>
+          <div className="mt-2">
+            <SectionTitle tag={'h2'} text={title}></SectionTitle>
+            <p className="md:body-text-md-3 body-text-sm-3  line-clamp-3 text-neutral-500 dark:text-neutral-100">
+              {summary}
+            </p>
+          </div>
+        </div>
+      </Link>
     </div>
-    )
+  )
 }
 
 const LatestNewsComponent = ({ postsData }: LatestNewsProps) => {

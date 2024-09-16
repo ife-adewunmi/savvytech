@@ -3,17 +3,11 @@ import { ImageInterface } from '@/data/hero/heroData'
 
 interface HeroImageProps {
   images: Array<ImageInterface>
-  imagePosition?: string
   gridCols?: number
 }
 
-const HeroImage = ({ images, gridCols, imagePosition }: HeroImageProps) => {
+const HeroImage = ({ images, gridCols }: HeroImageProps) => {
   const gridCol = gridCols || 2
-
-    images.map((image, index) => (
-        console.log(image.img)
-    ));
-
 
   return (
     <div className="h-full">
@@ -21,7 +15,7 @@ const HeroImage = ({ images, gridCols, imagePosition }: HeroImageProps) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`h-full rounded-2xl ${image.img} bg-contain ${image.pos || imagePosition || ''} bg-no-repeat`}
+            className={`h-full rounded-2xl ${image.img} bg-contain ${image.pos ? image.pos : ''} bg-no-repeat`}
           />
         ))}
       </div>

@@ -12,14 +12,14 @@ interface TrustedByProps {
 
 const renderImage = (key, client, width = 225, height = 40) => {
   return (
-      <Image
-          key={key}
-          src={`/static/images/svgs/clients/${client.name}.svg`}
-          alt={`Client Logo ${key + 1}`}
-          width={client.width || width}
-          height={client.height || height}
-          style={{width: 'auto', height: 'auto'}}
-      />
+    <Image
+      key={key}
+      src={`/static/images/svgs/clients/${client.name}.svg`}
+      alt={`Client Logo ${key + 1}`}
+      width={client.width || width}
+      height={client.height || height}
+      style={{ width: 'auto', height: 'auto' }}
+    />
   )
 }
 
@@ -35,7 +35,9 @@ const TrustedBy = ({ trustedByData, width, height }: TrustedByProps) => {
         {trustedByData.clients.map((client, index) => (
           <>
             <div className="hidden h-10 w-fit lg:block">{renderImage(index, client)}</div>
-            <div className="hidden h-6 w-fit md:block lg:hidden">{renderImage(index, client, 100, 24)}</div>
+            <div className="hidden h-6 w-fit md:block lg:hidden">
+              {renderImage(index, client, 100, 24)}
+            </div>
           </>
         ))}
       </div>
