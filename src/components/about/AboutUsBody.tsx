@@ -23,7 +23,7 @@ const AboutUsBody = () => {
           src={'/static/images/about/solar_view.jpg'}
           alt={`logo`}
           className="h-full object-cover"
-          style={{objectFit:"cover"}}
+          style={{ objectFit: 'cover' }}
           fill
         />
       </LayoutContainer>

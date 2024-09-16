@@ -1,5 +1,5 @@
 import React from 'react'
-import {ImageInterface} from "@/data/hero/heroData";
+import { ImageInterface } from '@/data/hero/heroData'
 
 interface HeroImageProps {
   images: Array<ImageInterface>
