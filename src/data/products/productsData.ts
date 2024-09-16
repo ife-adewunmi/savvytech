@@ -1,4 +1,4 @@
-import { Hero } from '@/data/hero/heroData'
+import { Hero, ImageInterface } from '@/data/hero/heroData'
 import {
   CALPAK_DATA,
   DONALSON_DATA,
@@ -9,18 +9,18 @@ import {
 } from '@/data/products/product-items'
 import { GROVE_CRANES_DATA } from '@/data/products/product-items/grovecranes'
 
-export interface Base {
+export interface Product {
   title: string
   description: string
+  logo: string
   href?: string
-  imgSrc?: string
   buttonText?: string
 }
 
-export interface Product extends Base {
-  logo: string
+export interface ProductPageInterface extends Product {
   content?: Array<ProductContent>
   color?: string
+  heroImages?: Array<ImageInterface>
 }
 
 export interface ProductContent {

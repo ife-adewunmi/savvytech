@@ -17,15 +17,13 @@ const OurProduct = ({ productsData }: OurProductProps) => {
     <SectionContainer className="relative mb-40">
       <SectionTitle text={'Our Product'}></SectionTitle>
       <div className="2xl:px-28">
-        <Link href={'/#'}>
-          <div className="grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2">
-            {initialDisplay.map((product, index) => (
-              <div key={index}>
-                <ProductCard index={index} product={product} />
-              </div>
-            ))}
-          </div>
-        </Link>
+        <div className="grid grid-cols-1 gap-6 md:gap-10 lg:grid-cols-2">
+          {initialDisplay.map((product, index) => (
+            <div key={index}>
+              <ProductCard index={index} product={product} />
+            </div>
+          ))}
+        </div>
       </div>
     </SectionContainer>
   )

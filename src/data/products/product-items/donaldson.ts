@@ -1,12 +1,12 @@
 import { Page } from '@/enums/page'
-import { Product } from '@/data/products/productsData'
+import { ProductPageInterface } from '@/data/products/productsData'
 
-export const DONALSON_DATA: Product = {
+export const DONALSON_DATA: ProductPageInterface = {
   title: 'DONALSON',
   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-  logo: 'bg-donaldson_img',
+  logo: '/static/images/productImages/donaldson.svg',
   href: Page.PRODUCT.concat('/donaldson'),
   buttonText: 'Read more',
   content: [
@@ -28,4 +28,5 @@ export const DONALSON_DATA: Product = {
       ],
     },
   ],
+  heroImages: [{ img: 'bg-about_img_1' }],
 }

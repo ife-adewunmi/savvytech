@@ -29,7 +29,7 @@ export default function SectionTitle({ text, tag, hasSubHeading, className }: Pr
       break
   }
   return (
-    <h2 className={`text-neutral-800 dark:text-neutral-100 ${tagClassName}  ${className}`}>
+    <h2 className={`text-neutral-800 dark:text-neutral-100 ${tagClassName} ${className || ''}`}>
       {text}
     </h2>
   )

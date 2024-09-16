@@ -1,33 +1,67 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { AboutBase } from '@/data/authors/aboutData'
 import HeroImage from '@/components/common/hero/HeroImage'
+import Link from '@/components/Link'
+import { Page } from '@/enums/page'
+import ButtonComponent from '@/components/common/button/ButtonComponent'
+import { ProductContent, ProductPageInterface } from '@/data/products/productsData'
 
-interface AboutHeroProps {
-  heroData: AboutBase
+interface ProductHeroProps {
+  product: ProductPageInterface
+  content: ProductContent
 }
 
-const ProductHero = ({ heroData }: AboutHeroProps) => {
+const ProductHero = ({ product, content }: ProductHeroProps) => {
+  console.log()
   return (
-    <SectionContainer className="mt-14 xl:mt-28">
-      <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">
-        <div className="z-0 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7 2xl:pr-9  ">
-          <div className="flex w-full flex-col gap-8 lg:gap-14">
-            <div className="flex w-full flex-col gap-4 lg:gap-6">
-              <h1 className="2xl:display-text-md xl:display-text-md heading-text-lg lg:display-text-sm text-neutral-900 dark:text-neutral-10">
-                {heroData.title}
-              </h1>
+    <>
+      <div
+        className={`${product.color || 'bg-secondary-900'} fixed top-0 -z-50 h-full w-full lg:w-2/4`}
+      />
+      <SectionContainer className="mt-14 min-h-96 xl:mt-28">
+        <div className="header-wrapper-2 fixed -z-20 mx-auto flex flex-col lg:flex-row">
+          <div className="flex basis-1/2 flex-col text-center text-neutral-10 lg:p-6 lg:text-start">
+            <p className="cta-text-sm mb-12">
+              <Link href={Page.PRODUCT}>Products </Link>
+              <span>/ {content.breadcrumb?.toUpperCase() || product.title.toLowerCase()}</span>
+            </p>
+
+            <div className="">
+              <div className="mb-8">
+                <h1 className="xl:display-text-lg display-text-sm lg:display-text-md  mb-6 font-bold">
+                  {product.title}
+                </h1>
+                <p className="body-text-2xl-3">{product.description}</p>
+              </div>
+              <div className="hidden lg:block">
+                <ButtonComponent
+                  buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
+                >
+                  Contact us
+                </ButtonComponent>
+              </div>
+              <div className="hidden md:block lg:hidden">
+                <ButtonComponent
+                  buttonStyle={{ size: 'md', padding: 'md', color: 'white', align: 'left' }}
+                >
+                  Contact us
+                </ButtonComponent>
+              </div>
+              <div className="block md:hidden">
+                <ButtonComponent
+                  buttonStyle={{ size: 'sm', padding: 'sm', color: 'white', align: 'left' }}
+                >
+                  Contact us
+                </ButtonComponent>
+              </div>
             </div>
           </div>
-        </div>
-
-        <div className="mt-8 flex h-72 w-full flex-col justify-center md:mt-0 md:h-[260px] md:basis-[70%] lg:h-[390px] 2xl:h-[510px]">
-          <div className="h-full w-full self-auto">
-            <HeroImage />
+          <div className="w-full basis-1/2 self-auto p-16">
+            {product.heroImages && <HeroImage images={product.heroImages} gridCols={1} />}
           </div>
         </div>
-      </div>
-    </SectionContainer>
+      </SectionContainer>
+    </>
   )
 }
 

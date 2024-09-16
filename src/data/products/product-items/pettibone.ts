@@ -1,7 +1,7 @@
 import { Page } from '@/enums/page'
-import { Product } from '@/data/products/productsData'
+import { ProductPageInterface } from '@/data/products/productsData'
 
-export const PETITBONE_DATA: Product = {
+export const PETITBONE_DATA: ProductPageInterface = {
   title: 'PETITBONE',
   description: `What if you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking

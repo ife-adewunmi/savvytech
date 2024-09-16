@@ -93,12 +93,12 @@ module.exports = {
         logo_footer_mobile: "url('/static/images/svgs/logo_footer_mobile.svg')",
         hero_image_1: "url('/static/images/hero_img_1.jpg')",
         hero_image_2: "url('/static/images/hero_img_2.jpg')",
-        about_img_1: "url('/static/images/aboutImage/about_img_1.svg')",
-        about_img_2: "url('/static/images/aboutImage/about_img_2.svg')",
-        about_img_3: "url('/static/images/aboutImage/about_img_3.svg')",
-        about_img_4: "url('/static/images/aboutImage/about_img_4.svg')",
-        manitowoc_img: "url('/static/images/productImages/manitowoc.svg')",
-        donaldson_img: "url('/static/images/productImages/donaldson.svg')",
+        'about_img_1': "url('/static/images/about/about_img_1.svg')",
+        'about_img_2': "url('/static/images/about/about_img_2.svg')",
+        'about_img_3': "url('/static/images/about/about_img_3.svg')",
+        'about_img_4': "url('/static/images/about/about_img_4.svg')",
+        'manitowoc_img': "url('/static/images/product/manitowoc.svg')",
+        'donaldson_img': "url('/static/images/product/donaldson.svg')",
       }),
       typography: ({ theme }) => ({
         DEFAULT: {

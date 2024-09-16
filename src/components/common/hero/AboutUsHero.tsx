@@ -1,10 +1,10 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { AboutBase } from '@/data/authors/aboutData'
+import { Hero } from '@/data/hero/heroData'
 import HeroImage from '@/components/common/hero/HeroImage'
 
 interface AboutHeroProps {
-  heroData: AboutBase
+  heroData: Hero
 }
 
 const AboutUsHeroBanner = ({ heroData }: AboutHeroProps) => {
@@ -23,7 +23,7 @@ const AboutUsHeroBanner = ({ heroData }: AboutHeroProps) => {
 
         <div className="mt-8 flex h-72 w-full flex-col justify-center md:mt-0 md:h-[260px] md:basis-[70%] lg:h-[390px] 2xl:h-[510px]">
           <div className="h-full w-full self-auto">
-            <HeroImage />
+            {heroData.heroImages && <HeroImage images={heroData.heroImages} />}
           </div>
         </div>
       </div>

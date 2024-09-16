@@ -2,7 +2,12 @@ export interface Hero {
   title: string
   description?: string
   btnTitle?: string
-  imgSrc?: string
+  heroImages?: Array<ImageInterface>
+}
+
+export interface ImageInterface {
+  img: string
+  pos?: string
 }
 
 export const homeHeroData: Hero = {
@@ -14,4 +19,10 @@ export const homeHeroData: Hero = {
 
 export const aboutHeroData: Hero = {
   title: 'Transforming engineering and procurement industries since 1991',
+  heroImages: [
+    { img: 'bg-about_img_1', pos: 'bg-right' },
+    { img: 'bg-about_img_2', pos: 'bg-bottom' },
+    { img: 'bg-about_img_3', pos: 'bg-right-top' },
+    { img: 'bg-about_img_4', pos: 'bg-left' },
+  ],
 }

@@ -1,7 +1,7 @@
 import { Page } from '@/enums/page'
-import { Product } from '@/data/products/productsData'
+import { ProductPageInterface } from '@/data/products/productsData'
 
-export const CALPAK_DATA: Product = {
+export const CALPAK_DATA: ProductPageInterface = {
   title: 'CALPAK',
   description: `What if you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking
@@ -9,7 +9,7 @@ export const CALPAK_DATA: Product = {
   logo: '/static/images/productImages/calpak.svg',
   href: Page.PRODUCT.concat('/calpak'),
   buttonText: 'Read more',
-  color: 'bg-green',
+  color: 'bg-primary-900',
   content: [
     {
       breadcrumb: '',
@@ -29,4 +29,5 @@ export const CALPAK_DATA: Product = {
       ],
     },
   ],
+  heroImages: [{ img: 'bg-hero_image_2' }],
 }

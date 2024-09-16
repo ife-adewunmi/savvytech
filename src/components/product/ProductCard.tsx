@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+import React, {useEffect, useState} from 'react'
 import Image from 'next/image'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 import { FaArrowRightLong } from 'react-icons/fa6'
@@ -11,6 +12,14 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ index, product }: ProductCardProps) => {
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) return null
+
   return (
     <div
       key={index}

@@ -1,15 +1,15 @@
 import { Page } from '@/enums/page'
-import { Product } from '@/data/products/productsData'
+import { ProductPageInterface } from '@/data/products/productsData'
 
-export const MANITOWOC_DATA: Product = {
+export const MANITOWOC_DATA: ProductPageInterface = {
   title: 'MANITOWOC',
   description: `Manitowoc is committed to providing the most innovative, 
     advanced and comprehensive range of lifting solutions with products 
     that have long set the standard for excellence worldwide`,
-  logo: 'bg-about_img_1',
+  logo: '/static/images/productImages/manitowoc.svg',
   href: Page.PRODUCT.concat('/manitowoc'),
   buttonText: 'Read more',
-  color: 'bg-secondary-800',
+  color: 'bg-secondary-900',
   content: [
     {
       breadcrumb: '',
@@ -29,4 +29,5 @@ export const MANITOWOC_DATA: Product = {
       ],
     },
   ],
+  heroImages: [{ img: 'bg-manitowoc_img' }],
 }
