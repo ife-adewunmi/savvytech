@@ -11,7 +11,7 @@ interface ProductHeroProps {
   content: ProductContent
 }
 
-const renderButton = (size: string) => {
+const renderButton = (size: 'md' | 'sm' | 'lg' | undefined) => {
   return (
     <ButtonComponent buttonStyle={{ size: size, padding: size, color: 'white', align: 'left' }}>
       Contact us
