@@ -22,7 +22,7 @@ module.exports = {
         'bg-hero_image_1',
         'bg-hero_image_2',
         'bg-manitowoc_img',
-        'bg-donaldson_img'
+        'bg-donaldson_img',
       ],
     },
   },

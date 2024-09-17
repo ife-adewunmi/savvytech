@@ -29,5 +29,5 @@ export const MANITOWOC_DATA: ProductPageInterface = {
       ],
     },
   ],
-  heroImages: [{ image: 'bg-manitowoc_img'}],
+  heroImages: [{ image: 'bg-manitowoc_img' }],
 }

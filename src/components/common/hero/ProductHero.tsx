@@ -13,11 +13,9 @@ interface ProductHeroProps {
 
 const renderButton = (size: string) => {
   return (
-      <ButtonComponent
-          buttonStyle={{ size: size, padding: size, color: 'white', align: 'left' }}
-      >
-        Contact us
-      </ButtonComponent>
+    <ButtonComponent buttonStyle={{ size: size, padding: size, color: 'white', align: 'left' }}>
+      Contact us
+    </ButtonComponent>
   )
 }
 
@@ -42,15 +40,9 @@ const ProductHero = ({ product, content }: ProductHeroProps) => {
                 </h1>
                 <p className="body-text-2xl-3">{product.description}</p>
               </div>
-              <div className="hidden lg:block">
-                {renderButton('lg')}
-              </div>
-              <div className="hidden md:block lg:hidden">
-                {renderButton('md')}
-              </div>
-              <div className="block md:hidden">
-                {renderButton('sm')}
-              </div>
+              <div className="hidden lg:block">{renderButton('lg')}</div>
+              <div className="hidden md:block lg:hidden">{renderButton('md')}</div>
+              <div className="block md:hidden">{renderButton('sm')}</div>
             </div>
           </div>
           <div className="w-full basis-1/2 self-auto p-16">
