@@ -11,8 +11,17 @@ interface ProductHeroProps {
   content: ProductContent
 }
 
+const renderButton = (size: string) => {
+  return (
+      <ButtonComponent
+          buttonStyle={{ size: size, padding: size, color: 'white', align: 'left' }}
+      >
+        Contact us
+      </ButtonComponent>
+  )
+}
+
 const ProductHero = ({ product, content }: ProductHeroProps) => {
-  console.log()
   return (
     <>
       <div
@@ -34,25 +43,13 @@ const ProductHero = ({ product, content }: ProductHeroProps) => {
                 <p className="body-text-2xl-3">{product.description}</p>
               </div>
               <div className="hidden lg:block">
-                <ButtonComponent
-                  buttonStyle={{ size: 'lg', padding: 'lg', color: 'white', align: 'left' }}
-                >
-                  Contact us
-                </ButtonComponent>
+                {renderButton('lg')}
               </div>
               <div className="hidden md:block lg:hidden">
-                <ButtonComponent
-                  buttonStyle={{ size: 'md', padding: 'md', color: 'white', align: 'left' }}
-                >
-                  Contact us
-                </ButtonComponent>
+                {renderButton('md')}
               </div>
               <div className="block md:hidden">
-                <ButtonComponent
-                  buttonStyle={{ size: 'sm', padding: 'sm', color: 'white', align: 'left' }}
-                >
-                  Contact us
-                </ButtonComponent>
+                {renderButton('sm')}
               </div>
             </div>
           </div>

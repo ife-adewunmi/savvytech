@@ -28,5 +28,5 @@ export const DONALSON_DATA: ProductPageInterface = {
       ],
     },
   ],
-  heroImages: [{ img: 'bg-about_img_1' }],
+  heroImages: [{ image: 'bg-donaldson_img' }],
 }

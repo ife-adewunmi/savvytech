@@ -12,6 +12,20 @@ module.exports = {
     './src/layouts/**/*.{js,ts,tsx}',
     './src/data/**/*.mdx',
   ],
+  purge: {
+    options: {
+      safelist: [
+        'bg-about_img_1',
+        'bg-about_img_2',
+        'bg-about_img_3',
+        'bg-about_img_4',
+        'bg-hero_image_1',
+        'bg-hero_image_2',
+        'bg-manitowoc_img',
+        'bg-donaldson_img'
+      ],
+    },
+  },
   darkMode: 'class',
   theme: {
     extend: {

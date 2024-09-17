@@ -1,5 +1,6 @@
 import React from 'react'
 import { ImageInterface } from '@/data/hero/heroData'
+import clsx from 'clsx';
 
 interface HeroImageProps {
   images: Array<ImageInterface>
@@ -15,7 +16,7 @@ const HeroImage = ({ images, gridCols }: HeroImageProps) => {
         {images.map((image, index) => (
           <div
             key={index}
-            className={`h-full rounded-2xl ${image.img} bg-contain ${image.pos ? image.pos : ''} bg-no-repeat`}
+            className={`h-full rounded-2xl bg-no-repeat ${image.image} ${ image.position || 'bg-contain bg-right'}`}
           />
         ))}
       </div>

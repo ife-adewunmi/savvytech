@@ -29,5 +29,5 @@ export const CALPAK_DATA: ProductPageInterface = {
       ],
     },
   ],
-  heroImages: [{ img: 'bg-hero_image_2' }],
+  heroImages: [{ image: 'bg-hero_image_2' }],
 }
