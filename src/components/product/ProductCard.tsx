@@ -31,7 +31,7 @@ const ProductCard = ({ index, product }: ProductCardProps) => {
           <h3 className="heading-text-md-1 mb-4 text-neutral-800 dark:text-neutral-50">
             {product.title}
           </h3>
-          <p className="md:body-text-lg-3 body-text-md-3 text-neutral-500 dark:text-neutral-100">
+          <p className="md:body-text-lg-3 body-text-md-3 line-clamp-4 text-neutral-500 dark:text-neutral-100">
             {product.description}
           </p>
           {!!product.buttonText && (

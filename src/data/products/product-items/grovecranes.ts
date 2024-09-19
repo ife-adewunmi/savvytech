@@ -6,9 +6,10 @@ export const GROVE_CRANES_DATA: ProductPageInterface = {
   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-  logo: '/static/images/grove_cranes.png',
+  logo: '/static/images/product/grove.svg',
   href: Page.PRODUCT.concat('/grove-cranes'),
   buttonText: 'Read more',
+  color: 'bg-client-grove',
   content: [
     {
       breadcrumb: '',
@@ -28,4 +29,5 @@ export const GROVE_CRANES_DATA: ProductPageInterface = {
       ],
     },
   ],
+  heroImages: [{ image: 'bg-grove_img' }],
 }

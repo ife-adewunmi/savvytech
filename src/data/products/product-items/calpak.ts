@@ -3,13 +3,14 @@ import { ProductPageInterface } from '@/data/products/productsData'
 
 export const CALPAK_DATA: ProductPageInterface = {
   title: 'CALPAK',
-  description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-  logo: '/static/images/productImages/calpak.svg',
+  description: `Calpak is a world leading manufacturer of high quality solar thermal products. 
+  Calpak’s product range includes a wide variety of collectors (flat selective and vacuum), 
+  hot water tanks, thermosiphon systems, forced circulation systems and accessories, 
+  which in turn are directed to the residential and non-residential sector.`,
+  logo: '/static/images/product/calpak.svg',
   href: Page.PRODUCT.concat('/calpak'),
   buttonText: 'Read more',
-  color: 'bg-primary-900',
+  color: 'bg-client-calpak',
   content: [
     {
       breadcrumb: '',
@@ -29,5 +30,5 @@ export const CALPAK_DATA: ProductPageInterface = {
       ],
     },
   ],
-  heroImages: [{ image: 'bg-hero_image_2' }],
+  heroImages: [{ image: 'bg-calpak_img' }],
 }

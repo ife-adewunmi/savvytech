@@ -1,6 +1,5 @@
 import React from 'react'
 import { ImageInterface } from '@/data/hero/heroData'
-import clsx from 'clsx'
 
 interface HeroImageProps {
   images: Array<ImageInterface>

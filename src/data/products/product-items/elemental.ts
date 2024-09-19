@@ -6,9 +6,10 @@ export const ELEMENTAL_DATA: ProductPageInterface = {
   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-  logo: '/static/images/elemental.png',
+  logo: '/static/images/product/elemental.svg',
   href: Page.PRODUCT.concat('/elemental'),
   buttonText: 'Read more',
+  color: 'bg-client-elemental',
   content: [
     {
       breadcrumb: '',
@@ -28,4 +29,5 @@ export const ELEMENTAL_DATA: ProductPageInterface = {
       ],
     },
   ],
+  heroImages: [{ image: 'bg-elemental_img' }],
 }

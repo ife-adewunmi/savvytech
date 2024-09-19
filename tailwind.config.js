@@ -12,18 +12,28 @@ module.exports = {
     './src/layouts/**/*.{js,ts,tsx}',
     './src/data/**/*.mdx',
   ],
-  options: {
-    safelist: [
-      'bg-about_img_1',
-      'bg-about_img_2',
-      'bg-about_img_3',
-      'bg-about_img_4',
-      'bg-hero_image_1',
-      'bg-hero_image_2',
-      'bg-manitowoc_img',
-      'bg-donaldson_img',
-    ],
-  },
+  safelist: [
+    'bg-about_img_1',
+    'bg-about_img_2',
+    'bg-about_img_3',
+    'bg-about_img_4',
+    'bg-hero_image_1',
+    'bg-hero_image_2',
+    'bg-manitowoc_img',
+    'bg-grove_img',
+    'bg-donaldson_img',
+    'bg-calpak_img',
+    'bg-pettibone_img',
+    'bg-elemental_img',
+    'bg-turbotect_img',
+    'bg-client-manitowoc',
+    'bg-client-grove',
+    'bg-client-donaldson',
+    'bg-client-calpak',
+    'bg-client-elemental',
+    'bg-client-pettibone',
+    'bg-client-turbotect',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -38,8 +48,6 @@ module.exports = {
         body: ['var(--font-open-sans)'],
       },
       colors: {
-        // primary: colors.pink,
-        // gray: colors.gray,
         white: '#FAFAFA',
         primary: {
           50: '#E0E0E8',
@@ -90,6 +98,15 @@ module.exports = {
           800: '#0F172A',
           900: '#020617',
         },
+        client: {
+          manitowoc: '#ED1C2E',
+          grove: '#41535D',
+          donaldson: '#0075C9',
+          calpak: '#002632',
+          elemental: '#6DBC47',
+          pettibone: '#020006',
+          turbotect: '#DB2F36',
+        },
       },
 
       backgroundImage: (theme) => ({
@@ -110,7 +127,12 @@ module.exports = {
         about_img_3: "url('/static/images/about/about_img_3.svg')",
         about_img_4: "url('/static/images/about/about_img_4.svg')",
         manitowoc_img: "url('/static/images/product/manitowoc.svg')",
+        grove_img: "url('/static/images/product/grove.svg')",
         donaldson_img: "url('/static/images/product/donaldson.svg')",
+        calpak_img: "url('/static/images/product/calpak.svg')",
+        pettibone_img: "url('/static/images/product/pettibone.svg')",
+        elemental_img: "url('/static/images/product/elemental.svg')",
+        turbotect_img: "url('/static/images/product/turbotect.svg')",
       }),
       typography: ({ theme }) => ({
         DEFAULT: {

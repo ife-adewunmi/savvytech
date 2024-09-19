@@ -25,8 +25,8 @@ const ProductHero = ({ product, content }: ProductHeroProps) => {
       <div
         className={`${product.color || 'bg-secondary-900'} fixed top-0 -z-50 h-full w-full lg:w-2/4`}
       />
-      <SectionContainer className="mt-14 min-h-96 xl:mt-28">
-        <div className="header-wrapper-2 fixed -z-20 mx-auto flex flex-col lg:flex-row">
+      <SectionContainer className="relative mt-14 min-h-[27rem] xl:mt-28">
+        <div className="header-wrapper fixed left-2/4 top-2/4 -z-20 mx-auto flex   w-[100%] -translate-x-2/4 -translate-y-2/4 flex-col lg:flex-row">
           <div className="flex basis-1/2 flex-col text-center text-neutral-10 lg:p-6 lg:text-start">
             <p className="cta-text-sm mb-12">
               <Link href={Page.PRODUCT}>Products </Link>

@@ -6,9 +6,10 @@ export const TURBO_TECT_DATA: ProductPageInterface = {
   description: `Imagine being able to travel back in time or to the future. Simple turn the knob
     to the desired date and press "Go". No more worrying about lost keys or
     forgotten headphones with this simple yet affordable solution.`,
-  logo: '/static/images/turbo_tect.png',
+  logo: '/static/images/product/turbotect.svg',
   href: Page.PRODUCT.concat('/turbotect'),
   buttonText: 'Read more',
+  color: 'bg-secondary-900',
   content: [
     {
       breadcrumb: '',
@@ -28,4 +29,5 @@ export const TURBO_TECT_DATA: ProductPageInterface = {
       ],
     },
   ],
+  heroImages: [{ image: 'bg-turbotect_img' }],
 }

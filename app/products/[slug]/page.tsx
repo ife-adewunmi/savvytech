@@ -28,17 +28,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             <ProductHero product={product} content={content} />
 
             {/* Content Section */}
-            <div className=" h-full bg-white">
+            <div className=" h-full bg-neutral-10 drop-shadow-2xl">
               <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
                 {!!content.pageContent &&
                   content.pageContent.map((item, index) => (
-                    <div key={index} className="mb-8 flex items-start rounded-lg bg-gray-100 p-6">
-                      <div className="w-1/3 pr-6">
+                    <div
+                      key={index}
+                      className="mb-10 flex flex-col items-start rounded-3xl bg-white p-4 drop-shadow-md md:flex-row"
+                    >
+                      <div className="mb-6 w-full md:mb-0 md:w-1/3 md:pr-6">
                         <div className="h-48 w-full rounded-lg bg-gray-300">
                           {/* Placeholder for product image */}
                         </div>
                       </div>
-                      <div className="w-2/3">
+                      <div className="w-full md:w-2/3">
                         <h2 className="mb-4 text-2xl font-semibold text-gray-900">{item.title}</h2>
                         {content.contentElement === 'li' && item.description.includes('•') ? (
                           <ul className="list-disc pl-5 text-gray-700">

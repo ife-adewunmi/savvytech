@@ -3,12 +3,11 @@ import { ProductPageInterface } from '@/data/products/productsData'
 
 export const DONALSON_DATA: ProductPageInterface = {
   title: 'DONALSON',
-  description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-  logo: '/static/images/productImages/donaldson.svg',
+  description: `Donaldson is the world's leading manufacturer of filtration solutions for Gas Turbine Systems`,
+  logo: '/static/images/product/donaldson.svg',
   href: Page.PRODUCT.concat('/donaldson'),
   buttonText: 'Read more',
+  color: 'bg-client-donaldson',
   content: [
     {
       breadcrumb: '',

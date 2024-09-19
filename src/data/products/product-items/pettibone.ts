@@ -6,9 +6,10 @@ export const PETITBONE_DATA: ProductPageInterface = {
   description: `What if you could look up any information in the world? Webpages, images, videos
     and more. Google has many features to help you find exactly what you're looking
     for.`,
-  logo: '/static/images/pettibone.png',
+  logo: '/static/images/product/pettibone.svg',
   href: Page.PRODUCT.concat('/pettibone'),
   buttonText: 'Read more',
+  color: 'bg-client-pettibone',
   content: [
     {
       breadcrumb: '',
@@ -28,4 +29,5 @@ export const PETITBONE_DATA: ProductPageInterface = {
       ],
     },
   ],
+  heroImages: [{ image: 'bg-pettibone_img' }],
 }
