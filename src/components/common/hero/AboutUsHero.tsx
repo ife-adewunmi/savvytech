@@ -9,7 +9,7 @@ interface AboutHeroProps {
 
 const AboutUsHeroBanner = ({ heroData }: AboutHeroProps) => {
   return (
-    <SectionContainer className="mt-14 xl:mt-28">
+    <SectionContainer className="-z-10 mt-14 xl:mt-28">
       <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">
         <div className="z-0 flex h-full w-full basis-1/2 flex-col justify-center xl:pr-7 2xl:pr-9  ">
           <div className="flex w-full flex-col gap-8 lg:gap-14">

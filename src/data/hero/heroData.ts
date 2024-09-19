@@ -6,8 +6,8 @@ export interface Hero {
 }
 
 export interface ImageInterface {
-  img: string
-  pos?: string
+  image: string
+  position?: string
 }
 
 export const homeHeroData: Hero = {
@@ -20,9 +20,9 @@ export const homeHeroData: Hero = {
 export const aboutHeroData: Hero = {
   title: 'Transforming engineering and procurement industries since 1991',
   heroImages: [
-    { img: 'bg-about_img_1', pos: 'bg-right' },
-    { img: 'bg-about_img_2', pos: 'bg-bottom' },
-    { img: 'bg-about_img_3', pos: 'bg-right-top' },
-    { img: 'bg-about_img_4', pos: 'bg-left' },
+    { image: 'bg-about_img_1', position: 'bg-contain bg-right' },
+    { image: 'bg-about_img_2', position: 'bg-cover bg-bottom' },
+    { image: 'bg-about_img_3', position: 'bg-contain bg-right-top' },
+    { image: 'bg-about_img_4', position: 'bg-contain bg-left' },
   ],
 }
