@@ -1,13 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
-import ButtonComponent from '@/components/common/button/ButtonComponent'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { ourHistoryData, ourPassionData } from '@/data/authors/aboutData'
+import { ourHistoryData, ourPassionData } from '@/data/abouts/about-data'
 import OurHistory from '@/components/about/OurHistory'
 import OurPassion from '@/components/about/OurPassion'
 import LayoutContainer from '@/components/LayoutContainer'
 import OurClients from '@/components/about/OurClients'
-import { clientsData } from '@/data/clientsData'
+import { clientsData } from '@/data/abouts/clients-data'
 
 const AboutUsBody = () => {
   return (
@@ -23,8 +22,6 @@ const AboutUsBody = () => {
           src={'/static/images/aboutImage/solar_view.jpg'}
           alt={`logo`}
           className="h-full object-cover"
-          // width={100}
-          // height={200}
           objectFit="cover"
           fill
         />

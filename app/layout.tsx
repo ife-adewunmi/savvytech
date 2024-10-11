@@ -11,6 +11,7 @@ import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import LayoutContainer from '@/components/LayoutContainer'
+import { Providers } from '@/state/store/provider'
 
 const open_sans = Open_Sans({
   subsets: ['latin'],
@@ -82,17 +83,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
       <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
+      {/*<script src="https://www.google.com/recaptcha/api.js" async defer></script>*/}
+      {/*<script src="https://js.hcaptcha.com/1/api.js?hl=en" async defer></script>*/}
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
-        <ThemeProviders>
-          <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
-          <LayoutContainer>
-            <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
-            </SearchProvider>
-            <Footer />
-          </LayoutContainer>
-        </ThemeProviders>
+        <Providers>
+          <ThemeProviders>
+            <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
+            <LayoutContainer>
+              <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
+                <Header />
+                <main className="mb-auto">{children}</main>
+              </SearchProvider>
+              <Footer />
+            </LayoutContainer>
+          </ThemeProviders>
+        </Providers>
       </body>
     </html>
   )

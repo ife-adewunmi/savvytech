@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { AboutBase } from '@/data/authors/aboutData'
+import { AboutBase } from '@/data/abouts/about-data'
 import HeroImage from '@/components/common/hero/HeroImage'
 
 interface AboutHeroProps {

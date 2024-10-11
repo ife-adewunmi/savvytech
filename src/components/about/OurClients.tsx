@@ -1,6 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
-import { Client } from '@/data/clientsData'
+import { Client } from '@/data/abouts/clients-data'
 import SectionContainer from '@/components/common/section/SectionContainer'
 import SectionTitle from '@/components/common/section/SectionTitle'
 

@@ -1,13 +1,13 @@
-import projectsData from '@/data/products/projectsData'
-import { trustedByData } from '@/data/clientsData'
-import servicesData from '@/data/products/servicesData'
+import projectsData from '@/data/products/projects-data'
+import { trustedByData } from '@/data/abouts/clients-data'
+import servicesData from '@/data/products/services-data'
 import HomeHero from '@/components/common/hero/HomeHero'
 import TrustedBy from '@/components/common/TrustedBy'
 import WhatWeDo from '@/components/common/ServicesComponent'
 import HomeCTA from '@/components/common/call-to-action/HomeCTA'
 import OurProduct from '@/components/product/OurProduct'
 import LatestNewsComponent from '@/components/post/LatestNewsComponent'
-import { homeHeroData } from '@/data/hero/heroData'
+import { homeHeroData } from '@/data/hero/hero-data'
 
 export default function Home({ posts }) {
   return (

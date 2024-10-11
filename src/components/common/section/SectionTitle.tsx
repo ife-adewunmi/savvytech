@@ -1,36 +1,70 @@
 import React from 'react'
 
-interface Props {
-  text: string
-  tag?: string
-  hasSubHeading?: boolean
-  className?: string
+export enum HeaderTag {
+  ONE = 'h1',
+  TWO = 'h2',
+  THREE = 'h3',
+  FOUR = 'h4',
+  FIVE = 'h5',
+  SIX = 'h6',
 }
 
-export default function SectionTitle({ text, tag, hasSubHeading, className }: Props) {
+interface Props {
+  text: string
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+  subHeadingText?: string
+  hasSubHeading?: boolean
+  className?: string
+  subHeadingClassName?: string
+}
+
+export default function SectionTitle({
+  text,
+  tag = HeaderTag.ONE,
+  subHeadingText = '',
+  hasSubHeading = false,
+  className = '',
+  subHeadingClassName = '',
+}: Props) {
   let tagClassName = ''
 
-  // Conditionally add class based on tag prop using switch case display-text-md
   switch (tag) {
-    case 'h1':
+    case HeaderTag.ONE:
       tagClassName = 'md:display-text-sm heading-text-lg mb-14 text-center'
       break
-    case 'h2':
+    case HeaderTag.TWO:
       tagClassName = 'md:heading-text-md-1 heading-text-sm-1 mb-2'
       break
-    case 'h3':
+    case HeaderTag.THREE:
       tagClassName = 'md:heading-text-md-1 heading-text-sm-1'
       break
-    case 'h4':
+    case HeaderTag.FOUR:
       tagClassName = 'lg:display-text-md heading-text-lg'
       break
     default:
       tagClassName = 'md:display-text-sm heading-text-lg mb-14 text-center'
       break
   }
+
+  const validTag = tag || 'h1'
+
+  const HeadingTag = React.createElement(
+    validTag,
+    {
+      className: `text-neutral-800 dark:text-neutral-100 ${tagClassName} ${className}`,
+    },
+    text
+  )
+
   return (
-    <h2 className={`text-neutral-800 dark:text-neutral-100 ${tagClassName}  ${className}`}>
-      {text}
-    </h2>
+    <>
+      {HeadingTag}
+
+      {hasSubHeading && subHeadingText && (
+        <p className={`mt-4 text-neutral-600 dark:text-neutral-300 ${subHeadingClassName}`}>
+          {subHeadingText}
+        </p>
+      )}
+    </>
   )
 }

@@ -1,21 +1,20 @@
 import React from 'react'
-import Image from 'next/image'
-import ButtonComponent from '@/components/common/button/ButtonComponent'
-import SectionContainer from '@/components/common/section/SectionContainer'
-import { ourContactInfo } from '@/data/contact/contactData'
-import OurHistory from '@/components/about/OurHistory'
-import OurPassion from '@/components/about/OurPassion'
-import LayoutContainer from '@/components/LayoutContainer'
+import { ourContactInfo } from '@/data/contact/contact-data'
 import ContactInfo from '@/components/contact/ContactInfo'
-import { clientsData } from '@/data/clientsData'
 import ContactForm from '@/components/contact/ContactForm'
+import SectionContainer from '@/components/common/section/SectionContainer'
 
 const ContactUsBody = () => {
   return (
-    <>
-      <ContactInfo contactData={ourContactInfo} />
-      <ContactForm />
-    </>
+    <SectionContainer className="relative my-20 flex lg:my-40">
+      <div className="w-full md:w-1/2">
+        <ContactInfo contactData={ourContactInfo} />
+      </div>
+
+      <div className="w-full md:w-1/2">
+        <ContactForm />
+      </div>
+    </SectionContainer>
   )
 }
 

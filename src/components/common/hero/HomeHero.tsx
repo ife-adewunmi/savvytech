@@ -3,8 +3,7 @@ import HeroCarousel from '@/components/common/hero/HeroCarousel'
 import { FaArrowRightLong } from 'react-icons/fa6'
 import ButtonComponent from '@/components/common/button/ButtonComponent'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { Client } from '@/data/clientsData'
-import { Hero } from '@/data/hero/heroData'
+import { Hero } from '@/data/hero/hero-data'
 
 interface HomeHeroProps {
   heroData: Hero

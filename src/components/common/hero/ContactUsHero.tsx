@@ -1,13 +1,12 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { ContactBase } from '@/data/contact/contactData'
-import HeroImage from '@/components/common/hero/HeroImage'
+import { ContactBase } from '@/data/contact/contact-data'
 
-interface AboutHeroProps {
+interface ContactHeroProps {
   heroData: ContactBase
 }
 
-const ContactUsHero = ({ heroData }: AboutHeroProps) => {
+const ContactUsHero = ({ heroData }: ContactHeroProps) => {
   return (
     <SectionContainer className="mt-14 xl:mt-28">
       <div className=" relative flex  w-full flex-col items-center justify-between md:flex-row">

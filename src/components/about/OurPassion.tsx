@@ -1,8 +1,6 @@
 import React from 'react'
-import Image from 'next/image'
-import { Service } from '@/data/products/servicesData'
 import SectionTitle from '@/components/common/section/SectionTitle'
-import { Passion } from '@/data/authors/aboutData'
+import { Passion } from '@/data/abouts/about-data'
 import { AiFillSetting, AiFillLike, AiFillShopping } from 'react-icons/ai'
 import { RiVerifiedBadgeFill } from 'react-icons/ri'
 

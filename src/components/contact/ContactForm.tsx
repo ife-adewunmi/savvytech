@@ -1,102 +1,143 @@
 'use client'
-import { useState } from 'react'
+
+import React, { useEffect, useRef } from 'react'
 import ButtonComponent from '../common/button/ButtonComponent'
-// import axios from "axios";
+import SectionTitle from '@/components/common/section/SectionTitle'
+import { useDispatch, useSelector } from '@/state/store/store'
+import {
+  ContactFormParams,
+  resetForm,
+  sendMessageAsync,
+  setFormData,
+} from '@/state/slices/contactFormSlice'
+
+export type FormData = {
+  name: string
+  email: string
+  message: string
+  recaptchaToken?: string
+}
+
+declare global {
+  interface Window {
+    grecaptcha: any
+    onRecaptchaLoad: () => void
+  }
+}
 
 export default function ContactForm() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const { formData, isLoading, error, successMessage } = useSelector((state) => state.contact)
+  // const recaptchaRef = useRef(null);
+  const dispatch = useDispatch()
 
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState('')
+  useEffect(() => {
+    return () => {
+      dispatch(resetForm())
+    }
+  }, [dispatch])
 
-  //   function submit(e) {
-  //     // This will prevent page refresh
-  //     e.preventDefault();
+  useEffect(() => {
+    // Load the reCAPTCHA script
+    const script = document.createElement('script')
+    script.src = `https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`
+    script.async = true
+    script.defer = true
+    document.body.appendChild(script)
 
-  //     axios
-  //       .post(
-  //         // replace this with your own unique endpoint URL
-  //         "https://formcarry.com/s/XXXXXXX",
-  //         {
-  //           email: email,
-  //           message: message
-  //         },
-  //         {
-  //           headers: {
-  //             Accept: "application/json"
-  //           }
-  //         }
-  //       )
-  //       .then((res) => {
-  //         // success http code
-  //         if (res.data.code === 200) {
-  //           setSubmitted(true);
-  //         } else {
-  //           setError(res.data.message);
-  //         }
-  //       });
-  //   }
+    return () => {
+      document.body.removeChild(script)
+    }
+  }, [])
 
-  if (error) {
-    return <p>{error}</p>
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    dispatch(setFormData({ [name]: value } as Partial<ContactFormParams>))
   }
 
-  if (submitted) {
-    return <p>We've received your message, thank you for contacting us!</p>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    try {
+      const captchaToken = await window.grecaptcha.execute(
+        process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY,
+        { action: 'submit' }
+      )
+      dispatch(sendMessageAsync({ ...formData, captchaToken }))
+    } catch (error) {
+      console.error('reCAPTCHA error:', error)
+    }
   }
 
   return (
-    <form className="">
-      <div>
-        <label htmlFor="name">Name</label>
-        <input
-          id="name"
-          type="name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
+    <>
+      <div className="mx-auto mb-16">
+        <SectionTitle text={'Write us'} tag="h4" className={'mb-8 text-left'} />
       </div>
-      <div>
-        <label htmlFor="email">Email</label>
-        <input
-          id="email"
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-      </div>
-      <div>
-        <label htmlFor="message">Message</label>
-        <textarea id="message" value={message} onChange={(e) => setMessage(e.target.value)} />
-      </div>
+      <form onSubmit={handleSubmit} method="POST" className="space-y-4">
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            name="name"
+            type="text"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleInputChange}
+            required
+            className="w-full rounded border p-2"
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="w-full rounded border p-2"
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            name="message"
+            placeholder="Your message"
+            value={formData.message}
+            onChange={handleInputChange}
+            rows={4}
+            className="w-full rounded border p-2"
+          />
+        </div>
 
-      <button type="submit">Send</button>
-
-      <div className="hidden lg:block">
-        <ButtonComponent
-          buttonStyle={{ size: 'lg', padding: 'lg', color: 'neutral', align: 'left' }}
-        >
-          Send Message
-        </ButtonComponent>
-      </div>
-      <div className="hidden md:block lg:hidden">
-        <ButtonComponent
-          buttonStyle={{ size: 'md', padding: 'md', color: 'neutral', align: 'left' }}
-        >
-          Send Message
-        </ButtonComponent>
-      </div>
-      <div className="block md:hidden">
-        <ButtonComponent
-          buttonStyle={{ size: 'sm', padding: 'sm', color: 'neutral', align: 'left' }}
-        >
-          Send Message
-        </ButtonComponent>
-      </div>
-    </form>
+        <div className="hidden lg:block">
+          <ButtonComponent
+            buttonStyle={{ size: 'lg', padding: 'lg', color: 'neutral', align: 'left' }}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending...' : 'SEND MESSAGE'}
+          </ButtonComponent>
+          {error && <p className="text-red-500">{error}</p>}
+        </div>
+        <div className="hidden md:block lg:hidden">
+          <ButtonComponent
+            buttonStyle={{ size: 'md', padding: 'md', color: 'neutral', align: 'left' }}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending...' : 'SEND MESSAGE'}
+          </ButtonComponent>
+          {error && <p className="text-red-500">{error}</p>}
+        </div>
+        <div className="block md:hidden">
+          <ButtonComponent
+            buttonStyle={{ size: 'sm', padding: 'sm', color: 'neutral', align: 'left' }}
+            disabled={isLoading}
+          >
+            {isLoading ? 'Sending...' : 'SEND MESSAGE'}
+          </ButtonComponent>
+          {error && <p className="text-red-500">{error}</p>}
+          {successMessage && <p className="text-green-500">{successMessage}</p>}
+        </div>
+      </form>
+    </>
   )
 }

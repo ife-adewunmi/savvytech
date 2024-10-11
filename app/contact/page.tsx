@@ -4,20 +4,21 @@ import AuthorLayout from '@/layouts/AuthorLayout'
 import Image from 'next/image'
 import { coreContent } from 'pliny/utils/contentlayer'
 import { genPageMetadata } from 'app/seo'
-import { contactHeroData } from '@/data/hero/heroData'
+import { contactHeroData } from '@/data/hero/hero-data'
 import ContactUsHero from '@/components/common/hero/ContactUsHero'
 import ContactUsBody from '@/components/contact/ContactUsBody'
+import { contactFaqData } from '@/data/contact/contact-data'
+import ContactFAQ from '@/components/contact/ContactFAQ'
+import React from 'react'
 
-export const metadata = genPageMetadata({ title: 'About' })
+export const metadata = genPageMetadata({ title: 'Contact' })
 
 export default function Page() {
-  const author = allAuthors.find((p) => p.slug === 'default') as Authors
-  const mainContent = coreContent(author)
-
   return (
     <>
       <ContactUsHero heroData={contactHeroData} />
       <ContactUsBody />
+      <ContactFAQ faqData={contactFaqData} />
     </>
   )
 }
