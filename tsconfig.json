@@ -19,6 +19,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@/components/*": ["src/components/*"],
+      "@/enums/*": ["src/enums/*"],
       "@/data/*": ["src/data/*"],
       "@/layouts/*": ["src/layouts/*"],
       "@/css/*": ["src/css/*"],
