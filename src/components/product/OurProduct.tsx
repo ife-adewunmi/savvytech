@@ -1,7 +1,6 @@
 import React from 'react'
-import { Product } from '@/data/products/productsData'
+import { Product } from '@/data/products/products-data'
 import SectionContainer from '../common/section/SectionContainer'
-import Link from '@/components/Link'
 import SectionTitle from '@/components/common/section/SectionTitle'
 import ProductCard from '@/components/product/ProductCard'
 

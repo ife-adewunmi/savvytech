@@ -12,7 +12,7 @@ export const baseButton = tv({
     color: {
       primary: 'bg-main_gradient text-white hover:bg-main_gradient_hover',
       secondary: 'bg-secondary-900 text-white hover:bg-secondary-600',
-      neutral: 'bg-neutral-700 hover:bg-neutral-900 ',
+      neutral: 'bg-neutral-700 text-white hover:bg-neutral-900 ',
       white:
         'text-neutral-700 bg-white drop-shadow-md hover:drop-shadow-lg hover:text-white hover:bg-primary-900',
       outline:

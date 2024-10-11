@@ -1,4 +1,4 @@
-import { Hero, ImageInterface } from '@/data/hero/heroData'
+import { Hero, ImageInterface } from '@/data/hero/hero-data'
 import {
   CALPAK_DATA,
   DONALSON_DATA,

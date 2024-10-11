@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { TrustedClient } from '@/data/clientsData'
+import { TrustedClient } from '@/data/abouts/clientsData'
 import SectionContainer from '@/components/common/section/SectionContainer'
 import SectionTitle from '@/components/common/section/SectionTitle'
 

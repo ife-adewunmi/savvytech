@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionTitle from '@/components/common/section/SectionTitle'
-import { AboutBase } from '@/data/authors/aboutData'
+import { AboutBase } from '@/data/abouts/about-data'
 
 interface OurHistoryProps {
   ourHistoryData: AboutBase

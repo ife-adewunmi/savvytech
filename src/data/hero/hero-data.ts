@@ -26,3 +26,8 @@ export const aboutHeroData: Hero = {
     { image: 'bg-about_img_4', position: 'bg-contain bg-left' },
   ],
 }
+
+export const contactHeroData: Hero = {
+  title: 'Contact Us',
+  description: `We’re here to help and answer any question you might have. We look forward to hearing from you!`,
+}

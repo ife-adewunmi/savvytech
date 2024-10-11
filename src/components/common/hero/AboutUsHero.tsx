@@ -1,6 +1,6 @@
 import React from 'react'
 import SectionContainer from '@/components/common/section/SectionContainer'
-import { Hero } from '@/data/hero/heroData'
+import { Hero } from '@/data/hero/hero-data'
 import HeroImage from '@/components/common/hero/HeroImage'
 
 interface AboutHeroProps {
